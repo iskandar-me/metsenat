@@ -1,4 +1,15 @@
-
+@import url(./normalize.css);
+@import url(./reset.css);
+@import url(./normalize.css);
+@import url(./variables.css);
+@font-face {
+  font-family: "Rubic","Arial", sans-serif;
+  src: url(../fonts/Rubik-Italic-VariableFont_wght.ttf);
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+}
+*{
+  font-family: "Rubik", "Arial",sans-serif;
+}
 /* GLOBAL */
 body {
   display: flex;
