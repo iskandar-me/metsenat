@@ -1,0 +1,22 @@
+.btn {
+   border-radius: 6px;
+   border: 1px solid transparent;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+.btn:active {
+   outline: none;
+   transform: scale(0.95);
+}
+.btn:focus {
+   outline: none;
+}
+.btn.btn-primary {
+   background: #2e5bff;
+   color: #fff;
+   text-align: center;
+   font-size: 15px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 21px;
+}

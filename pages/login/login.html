@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login | Metsenat Club</title>
+      <link
+         rel="shortcut icon"
+         href="./assets/img/favicon.svg"
+         type="image/x-icon" />
+      <link rel="stylesheet" href="../../components/form/form.css" />
+      <link rel="stylesheet" href="../../components/button/button.css">
+      <link rel="stylesheet" href="../../assets/css/style.css" />
+      <link rel="stylesheet" href="./login.css">
+   </head>
+   <body>
+      <div class="login-wrapper">
+         <div class="login">
+            <div class="login__logo">
+               <a class="link" href="../../index.html">
+                  <img src="../../assets/img/logo.svg" alt="" height="" />
+                  <span>Club</span>
+               </a>
+            </div>
+            <form class="form login-form">
+               <h2 class="login__title">Kirish</h2>
+               <div class="login__form-group">
+                  <label class="login__label" for="username">lOGIN</label>
+                  <input
+                     type="text"
+                     class="input"
+                     id="username"
+                     name="username"
+                     placeholder="adm8904" />
+               </div>
+               <div class="login__form-group">
+                  <label class="login__label" for="password">password</label>
+                  <input
+                     type="password"
+                     class="input"
+                     id="password"
+                     name="password"
+                     placeholder="••••••••••" />
+
+
+               </div>
+               <div class="recaptcha-wrapper">
+                  <div class="recaptcha__checkbox-box">
+                     <input
+                        class="input recaptcha__checkbox"
+                        type="checkbox"
+                        id="recaptcha" />
+                     <label class="login__label" for="recaptcha"
+                        >I’m not a robot</label
+                     >
+                  </div>
+                  <div class="recaptcha__img-box">
+                     <img
+                        src="../assets/img/auth/recaptcha.svg"
+                        alt="Recaptcha" />
+                     <span>reCAPTCHA</span>
+                     <a href="#">Privacy - Terms</a>
+                  </div>
+               </div>
+               <a href="../admin-panel/admin-panel.html" class="btn btn-primary   submit" type="submit">Kirish</a>
+            </form>
+         </div>
+      </div>
+
+      <!-- <script src="./js/theme-toggler.js"></script> -->
+      <!-- <script src="../../components/form/form.js"></script> -->
+      <script src="../../js/script.js"></script>
+   </body>
+</html>

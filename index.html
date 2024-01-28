@@ -4,15 +4,187 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Metsenat Club</title>
-      <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+      <link
+         rel="shortcut icon"
+         href="./assets/img/favicon.svg"
+         type="image/x-icon" />
+      <link rel="stylesheet" href="./components/button/button.css" />
+      <link rel="stylesheet" href="./components/form/form.css" />
+      <link rel="stylesheet" href="./pages/login/login.css" />
+      <link rel="stylesheet" href="./components/tab/tab.css" />
       <link rel="stylesheet" href="./assets/css/style.css" />
+      <style>
+
+
+      </style>
    </head>
    <body>
-      <img src="./assets/img/logo.svg" alt="">
+      <div class="container">
+         <header class="header intro-header">
+            <a class="link main-link" href="./index.html">
+               <img src="../../assets/img/logo.svg" alt="" height="" />
+               <span>Club</span>
+            </a>
+            <nav class="navbar">
+               <!-- <a class="" href="#">Asosiy</a> -->
+               <!-- <a class="" href="#">Grantlar</a> -->
+               <!-- <a class="" href="#">Soliq imtiyozlari</a> -->
+               <!-- <a class="" href="#">Grantlar</a> -->
+               <a class="login-link" href="./pages/login/login.html">
+                  <img src="./assets/img/auth/login-icon.svg" alt="" />
+                  <span>Kirish</span>
+               </a>
+               <a class="signup-link" href="#">Ro‘yxatdan o’tish</a>
+            </nav>
+         </header>
 
+         <main class="main">
+            <section class="application-section">
+               <h2 class="application__title">
+                  Homiy sifatida ariza topshirish
+               </h2>
+               <form class="form sponsorship-form">
+                  <div class="form-group">
+                     <label for="full-name" class="label">
+                        F.I.Sh. (Familiya Ism Sharifingiz)
+                     </label>
+                     <input
+                        class="input"
+                        type="text"
+                        name="full-name"
+                        id="full-name"
+                        placeholder="Abdullayev Abdulla Abdulla o’g’li" />
+                  </div>
+                  <div class="form-group">
+                     <label for="phone-number" class="label"
+                        >Telefon raqamingiz</label
+                     >
+                     <div class="form__phone-group">
+                        <span>+998</span>
+                        <input
+                           class="input input-phone input-number"
+                           type="text"
+                           name="phone-number"
+                           id="phone-number"
+                           placeholder="00 000 00 00"
+                           maxlength="9" />
+                     </div>
+                  </div>
+                  <label for="" class="label">To‘lov summasi</label>
 
-      
-      <script src="./js/theme-toggler.js"></script>
+                  <div class="sponsorship-amount">
+                     <label for="1" class="radio">
+                        <input
+                           type="radio"
+                           id="1"
+                           name="sponsorship"
+                           class="radio-input" />
+                        <span class="radio-label">1 000 000 Uzs</span>
+                     </label>
+                     <label for="2" class="radio">
+                        <input
+                           type="radio"
+                           id="2"
+                           name="sponsorship"
+                           class="radio-input" />
+                        <span class="radio-label">5 000 000 Uzs</span>
+                     </label>
+                     <label for="3" class="radio">
+                        <input
+                           type="radio"
+                           id="3"
+                           name="sponsorship"
+                           class="radio-input" />
+                        <span class="radio-label">7 000 000 Uzs</span>
+                     </label>
+                     <label for="4" class="radio">
+                        <input
+                           type="radio"
+                           id="4"
+                           name="sponsorship"
+                           class="radio-input " />
+                        <span class="radio-label">10 000 000 Uzs</span>
+                     </label>
+                     <label for="5" class="radio">
+                        <input
+                           type="radio"
+                           id="5"
+                           name="sponsorship"
+                           class="radio-input" />
+                        <span class="radio-label">30 000 000 Uzs</span>
+                     </label>
+                     <label for="6" class="radio">
+                        <input
+                           type="radio"
+                           id="6"
+                           name="sponsorship"
+                           class="radio-input  other-sum-label" />
+                        <span class="radio-label">BOSHQA</span>
+                     </label>
+                     <input
+                        class="input other-sum input-number"
+                        name="6"
+                        id="custom-amount"
+                        type="text"
+                        value="0" />
+                  </div>
+                  <!-- Legal Entity -->
+
+                  <div class="legal-entity-wrapper">
+                     <div class="form-group">
+                        <input
+                           type="checkbox"
+                           name="LegalEntity"
+                           id="LegalEntity" />
+                        <label for="LegalEntity">Yuridik shaxs nomidan</label>
+                     </div>
+                     <div class="legal-entity-el hidden">
+                        <label for="org-name" class="label"
+                           >Tashkilot nomi</label
+                        >
+                        <input
+                           class="input org-name"
+                           type="text"
+                           placeholder="Orient group"
+                           name="org-name"
+                           id="org-name" />
+                     </div>
+                  </div>
+
+                  <button class="submit sponsorship-submit" type="submit">Yuborish</button>
+               </form>
+            </section>
+            <section class="data-sent-section">
+               <img src="./assets/img/sent.svg" alt="Your ">
+               <h2>Ma’lumotlar tekshirish uchun yuborildi.</h2>
+               <p>Tez orada siz bilan operatorimiz bog’lanib, barcha ma’lumotlarni aniqlashtiradi.</p>
+            </section>
+            <section class="quote-section">
+               <h3 class="quote__title">
+                  Yuqori sinflarda bolalar shaxs boʻlib, jamoa boʻlib
+                  shakllanadi. Ayni oʻsha paytda ularni oʻzlari oʻrgangan
+                  muhitdan ajratib qoʻymaslik kerak.
+               </h3>
+               <div class="president">
+                  <img
+                     class="president__img"
+                     src="./assets/img/mr-presidents-picture.svg"
+                     alt="President Of Uzbekistan" />
+                  <span class="">
+                     <span class="president__name">Shavkat Mirziyoyev</span>
+                     <span class="president__profession">
+                        O‘zbekiston Respublikasi Prezidenti
+                     </span>
+                  </span>
+               </div>
+               <img class="bg-img" src="./assets/img/background-img.svg" alt="">
+            </section>
+         </main>
+      </div>
+
+      <!-- <script src="./js/theme-toggler.js"></script> -->
+      <script src="./components/form/form.js"></script>
+      <script src="./components/tab/tab.js"></script>
       <script src="js/script.js"></script>
    </body>
 </html>

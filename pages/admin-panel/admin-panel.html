@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Admin | Metsenat club</title>
+      <link rel="stylesheet" href="../../components/form/form.css" />
+      <link rel="stylesheet" href="../../components/tab/tab.css" />
+      <link rel="stylesheet" href="../../components/button/button.css">
+      <link rel="stylesheet" href="../../assets/css/style.css" />
+
+      <link rel="stylesheet" href="./admin-panel.css" />
+   </head>
+   <body>
+      <header class="header">
+         <a class="admin-link" href="./admin-panel.html">
+            <img src="../../assets/img/admin-panel-logo.svg" alt="" />
+         </a>
+         <div class="admin__info">
+            <div class="admin__profile">
+               <span class="admin__name">Shohrux</span>
+               <span class="admin__logo">
+                  <img
+                     src="../../assets/img/admin-profile-logo.svg"
+                     alt="fghtfjgkh." />
+               </span>
+            </div>
+            <div class="logut">
+               <img src="../../assets/img/auth/logout.svg" alt="" />
+            </div>
+         </div>
+      </header>
+      <div class="container">
+         <section class="navigation">
+            <div class="tab">
+               <button class="tablink" onclick="openTab(event,'dashboard')" id="defaultOpen">
+                  Dashboard
+               </button>
+               <button class="tablink" onclick="openTab(event,'sponsors')" >
+                  Homiylar
+               </button>
+               <button class="tablink" onclick="openTab(event,'students')"  >
+                  Talabalar
+               </button>
+            </div>
+            <div class="search-panel">
+               <form class="search-form">
+                  <input class="input search-input" type="text" placeholder="Search..." />
+                  <img src="../../assets/img/search.svg" alt="" />
+               </form>
+               <div class="filter-warpper">
+                <img src="../../assets/img/filter.svg" alt="">
+                <span>Filter</span>
+               </div>
+            </div>
+         </section>
+         <section id="dashboard"  class="tab-content" >
+          <div class="payment-status">
+            <div class="payment__amount paid">
+              <img src="../../assets/img/paid-icon.svg" alt="">
+              <div class="">
+                <h3>Jami to‘langan summa</h3>
+                <p>1 684 325 000
+                  <span>UZS</span>
+                </p>
+              </div>
+            </div>
+            <div class="payment__amount requested">
+              <img src="../../assets/img/requested.svg" alt="">
+              <div class="">
+                 <h3>Jami so`ralgan summa</h3>
+                 <p>14 098 530 000
+                   <span>UZS</span>
+              </div>
+              </p>
+            </div>
+            <div class="payment__amount to-be-paid">
+              <img src="../../assets/img/should-be-paid.svg" alt="">
+              <div class="">
+                 <h3>To‘lanishi kerak summa</h3>
+                 <p>12 414 205 000
+                   <span>UZS</span>
+                 </p>
+              </div>
+            </div>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas id="my-canvas" width="1200" height="400"></canvas>
+
+
+          </div>
+         </section>
+         <section id="sponsors" class="tab-content">
+            <table class="table">
+               <thead class="thead">
+                  <tr class="trow">
+                     <th>#</th>
+                     <th>f.i.sh.</th>
+                     <th>Tel.Raqami</th>
+                     <th>Homiylik summasi</th>
+                     <th>Sarflangan summa</th>
+                     <th>Sana</th>
+                     <th>Holati</th>
+                     <th>Amallar</th>
+                  </tr>
+               </thead>
+               <tbody class="tbody">
+                  <tr class="trow">
+                     <td >1</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>6</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>7</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>8</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>9</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>10</td>
+                     <td>Alimov Abror Xabibullayevich</td>
+                     <td>+99899 973-72-60</td>
+                     <td>30 000 000 UZS</td>
+                     <td>0 UZS</td>
+                     <td>15.01.2021</td>
+                     <td>Yangi</td>
+                     <td><img src="../../assets/img/eye.svg" alt=""></td>
+                  </tr>
+               </tbody>
+            </table>
+         </section>
+         <section id="students" class="tab-content">
+            <div class="add-student-btn-wrapper">
+               <button class="btn btn-primary add-student-btn">+ Talaba qo‘shish</button>
+            </div>
+            <div class="table-wrapper">
+               <table class="table">
+                  <thead class="thead">
+                     <tr class="trow">
+                        <th>#</th>
+                        <th>f.i.sh.</th>
+                        <th>Talabalik turi</th>
+                        <th>OTM</th>
+                        <th>Ajratilingan summa</th>
+                        <th>Kontrakt miqdori</th>
+                        <th>Amallar</th>
+                     </tr>
+                  </thead>
+                  <tbody class="tbody">
+                     <tr class="trow">
+                        <td>1</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>2</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>3</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>4</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>5</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>6</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>7</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>8</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>9</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                     <tr class="trow">
+                        <td>10</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>Bakalavr</td>
+                        <td>Toshkent shahridagi INHA Universiteti</td>
+                        <td>14 000 000 UZS</td>
+                        <td>30 000 000 UZS</td>
+                        <td><img src="../../assets/img/eye.svg" alt=""></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+      </div>
+
+      <script src="./admin-panel.js"></script>
+   </body>
+</html>
