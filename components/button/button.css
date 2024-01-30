@@ -12,11 +12,33 @@
    outline: none;
 }
 .btn.btn-primary {
+   display: inline-flex;
+   height: 42px;
+   padding: 8px 32px;
+   align-items: center;
+   gap: 10px;
+   flex-shrink: 0;
    background: #2e5bff;
    color: #fff;
-   text-align: center;
    font-size: 15px;
    font-style: normal;
    font-weight: 500;
    line-height: 21px;
+}
+.btn.btn-secondary {
+   display: inline-flex;
+   padding: 8px 32px;
+   align-items: center;
+   gap: 4px;
+   flex-shrink: 0;
+   border-radius: 5px;
+   border: 1px solid #b2b7c1;
+   color: #b2b7c1;
+   font-feature-settings: "clig" off, "liga" off;
+   font-family: "SF Pro Text", "Arial", sans-serif;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px;
+   letter-spacing: -0.35px;
 }

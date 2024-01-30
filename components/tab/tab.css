@@ -64,13 +64,13 @@
 .sponsorship-amount {
    display: flex;
    flex-wrap: wrap;
-   gap: 16px;
+   gap: 12px;
    margin-bottom: 28px;
 }
 .radio {
    display: inline-flex;
    height: 61px;
-   padding: 20px 33px;
+   padding: 8px 9px;
    justify-content: center;
    align-items: center;
    flex-shrink: 0;

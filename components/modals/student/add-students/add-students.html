@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talaba qo‘shish</title>
+  <link rel="stylesheet" href="../../../form/form.css">
+  <link rel="stylesheet" href="../../../../assets/css/style.css">
+  <link rel="stylesheet" href="./add-students.css">
+
+</head>
+<body>
+<div class="modal">
+  <div class="">
+    <img src="../../../../assets/img/arrow-icons/to-back.svg" alt="">
+    <h2 class="modal__title">Talaba qo‘shish</h2>
+  </div>
+  <form class="add-student-form">
+    <div class="flex">
+      <div class="form-group">
+        <label for="student-full-name" class="label">F.I.Sh. (Familiya Ism Sharif)</label>
+        <input type="text" class="input" id="student-full-name">
+      </div>
+      <div class="form-group">
+        <label for="student-number" class="label">Telefon raqam</label>
+        <div class="form__phone-group">
+          <span>+998</span>
+          <input  class="input input-phone input-number"
+             type="text"
+             name="student-number"
+             id="student-number"
+             placeholder="00 000 00 00"
+             maxlength="9" />
+       </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="university" class="label">OTM</label>
+      <select class="select" name="university" id="university">
+        <option value="">OTM ni tanlang</option>
+        <option value="">Toshkent shahridagi INHA Universiteti</option>
+        <option value="">O’zbekiston milliy universiteti</option>
+        <option value="">Toshkent davlat texnika universiteti</option>
+        <option value="">Toshkent davlat iqtisodiyot universiteti</option>
+        <option value="">O’zbekiston davlat jahon tillari universiteti</option>
+        <option value="">Toshkent davlat sharqshunoslik instituti</option>
+        <option value="">Toshkent to’qimachilik va нngil sanoat istituti</option>
+        <option value="">Toshkent arxitektura-qurilish instituti</option>
+        <option value="">Toshkent moliya instituti</option>
+      </select>
+    </div>
+    <div class="flex">
+      <div class="form-group">
+        <label class="label" for="studentship-type">Talabalik turi</label>
+        <select class="select" name="" id="studentship-type">
+          <option value="">Barchasi</option>
+          <option value="">Kunduzgi</option>
+          <option value="">Kechki</option>
+          <option value="">Sirtqi</option>
+          <option value="">Masofaviy</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="label" for="tuition-fee">Kontrakt summa</label>
+        <input class="input input-number" type="text" name="tuition-fee" id="tuition-fee">
+      </div>
+    </div>
+  </form>
+</div>
+<script src="../../../form/form.js"></script>
+</body>
+</html>

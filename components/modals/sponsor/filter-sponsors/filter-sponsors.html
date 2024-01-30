@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter SPonsors | Metsenat</title>
+  <link rel="stylesheet" href="../../../button/button.css">
+  <link rel="stylesheet" href="../../../form/form.css">
+  <link rel="stylesheet" href="../../../tab/tab.css">
+  <link rel="stylesheet" href="./filter-sponsors.css">
+  <link rel="stylesheet" href="../../../../assets/css/style.css">
+</head>
+
+<body style="background-color: rgba(0, 0, 0,0.5);">
+  <form class="filter-sponsors-form ">
+    <div class="filter-header">
+      <h2 class="filter__title">
+        Filter
+      </h2>
+      <button class="btn close-btn">
+        <img src="../../../../assets/img/crud/close.-icon.svg" alt="">
+      </button>
+    </div>
+    <div class="form-group">
+      <label for="application-status" class="label">Ariza holati</label>
+      <select class="select" name="" id="application-status">
+        <option value="all">Barchasi</option>
+        <option value="new">Yangi</option>
+        <option value="in-moderation">Moderatsiyada</option>
+        <option value="approved">Tasdiqlangan</option>
+        <option value="denied">Bekor qilingan</option>
+      </select>
+    </div>
+    <div class="">
+      <label for="" class="label">To‘lov summasi</label>
+        <div class="sponsorship-amount">
+          <label for="6" class="radio">
+            <input
+               type="radio"
+               id="6"
+               name="sponsorship"
+               class="radio-input  other-sum-label" />
+            <span class="radio-label">BOSHQA</span>
+         </label>
+          <label for="1" class="radio">
+             <input
+                type="radio"
+                id="1"
+                name="sponsorship"
+                class="radio-input" />
+             <span class="radio-label">1 000 000 Uzs</span>
+          </label>
+          <label for="2" class="radio">
+             <input
+                type="radio"
+                id="2"
+                name="sponsorship"
+                class="radio-input" />
+             <span class="radio-label">5 000 000 Uzs</span>
+          </label>
+          <label for="3" class="radio">
+             <input
+                type="radio"
+                id="3"
+                name="sponsorship"
+                class="radio-input" />
+             <span class="radio-label">7 000 000 Uzs</span>
+          </label>
+          <label for="4" class="radio">
+             <input
+                type="radio"
+                id="4"
+                name="sponsorship"
+                class="radio-input " />
+             <span class="radio-label">10 000 000 Uzs</span>
+          </label>
+          <label for="5" class="radio">
+             <input
+                type="radio"
+                id="5"
+                name="sponsorship"
+                class="radio-input" />
+             <span class="radio-label">30 000 000 Uzs</span>
+          </label>
+
+          <input
+             class="input other-sum input-number"
+             name="6"
+             id="custom-amount"
+             type="text"
+             value="0" />
+       </div>
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="date" class="label">Sana</label>
+      <input class="input" type="datetime-local">
+    </div>
+    <div class="filter-sponsors-form__footer">
+      <button class="btn btn-secondary">
+        <img src="../../../../assets/img/crud/clear-icon.svg" alt="">
+        Tozalash
+      </button>
+      <button class="btn btn-primary">
+        <img src="../../../../assets/img/white-eye.svg" alt="">
+        Natijalarni ko‘rish
+      </button>
+    </div>
+  </form>
+  <script src="../../../form/form.js"></script>
+</body>
+</html>

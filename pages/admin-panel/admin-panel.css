@@ -1,10 +1,13 @@
+.admin-body {
+   position: relative;
+}
 .header {
    border-bottom: none;
    background: #fff;
    box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.03);
 }
-.admin-link {
-}
+/* .admin-link {
+} */
 .admin__info {
    display: flex;
    align-items: center;
@@ -115,7 +118,7 @@
 .search-form .search-input {
    padding-left: 40px;
 }
-.filter-warpper {
+.filter-wrapper {
    display: flex;
    padding: 8px 32px;
    justify-content: center;
@@ -125,10 +128,10 @@
    background: #edf1fd;
    cursor: pointer;
 }
-.filter-warpper:hover {
+.filter-wrapper:hover {
    background: #e0e7ff;
 }
-.filter-warpper span {
+.filter-wrapper span {
    color: #3365fc;
    text-align: center;
    font-feature-settings: "clig" off, "liga" off;
@@ -138,6 +141,9 @@
    font-weight: 500;
    line-height: 24px;
    letter-spacing: -0.35px;
+}
+.filter-wrapper:active {
+   transform: scale(0.95);
 }
 
 /* TAB   CONTENT */
@@ -240,7 +246,15 @@
 .trow td:nth-child(5) {
    font-weight: 500;
 }
-
+.eye-icon {
+   cursor: pointer;
+   padding: 4px;
+   border-radius: 4px;
+   transition: all 0.3s ease;
+}
+.eye-icon:hover{
+   background-color: rgba(51, 102, 255,0.3);
+}
 /* STUDENTS */
 #students {
    display: none;
