@@ -28,7 +28,9 @@
   }
 }
 
-
+.login__logo{
+  margin-bottom: 28px;
+}
 .login-form {
   display: flex;
   flex-direction: column;

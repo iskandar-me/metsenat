@@ -40,6 +40,70 @@
    line-height: normal;
 }
 
+.form__phone-group {
+   position: relative;
+   /* display: flex; */
+}
+.form__phone-group span {
+   position: absolute;
+   left: 16px;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #000;
+   font-size: 15px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+.input-phone {
+   padding-left: 57px;
+}
+.sponsorship-amount {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-bottom: 28px;
+}
+.radio {
+   display: inline-flex;
+   height: 61px;
+   padding: 8px 9px;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+   border-radius: 5px;
+   border: 1px solid #e0e7ff;
+   background: #fff;
+   cursor: pointer;
+}
+.other-sum {
+   display: none;
+}
+
+.legal-entity-wrapper {
+   display: flex;
+   flex-direction: column;
+   font-size: 12px;
+   color: #000;
+   font-weight: 600;
+   line-height: normal;
+   cursor: pointer;
+   margin-bottom: 28px;
+}
+.legal-entity-wrapper .form-group {
+   display: flex;
+   flex-direction: row;
+}
+
+.legal-entity-el {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+.legal-entity-el.hiddden {
+   display: none;
+}
+
 .radio {
    margin-bottom: 5px;
    cursor: pointer;
@@ -63,6 +127,21 @@
    right: -20px;
    z-index: 10;
 }
-.submit {
-   transform: scale(0.95);
+.submit-btn {
+   border-radius: 6px;
+   border: none;
+   background: #2e5bff;
+   color: #fff;
+   text-align: center;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 21px;
+   padding: 15px 260px 24px;
+   cursor: pointer;
+}
+.submit-btn:hover {
+   background-color: #2853ee;
+}
+.submit-btn:active {
+   transform: scale3d(0.95);
 }

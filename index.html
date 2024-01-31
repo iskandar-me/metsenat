@@ -8,7 +8,7 @@
          rel="shortcut icon"
          href="./assets/img/favicon.svg"
          type="image/x-icon" />
-      <link rel="stylesheet" href="./components/button/button.css" />
+         <link rel="stylesheet" href="./components/button/button.css">
       <link rel="stylesheet" href="./components/form/form.css" />
       <link rel="stylesheet" href="./pages/login/login.css" />
       <link rel="stylesheet" href="./components/tab/tab.css" />
@@ -26,15 +26,11 @@
                <span>Club</span>
             </a>
             <nav class="navbar">
-               <!-- <a class="" href="#">Asosiy</a> -->
-               <!-- <a class="" href="#">Grantlar</a> -->
-               <!-- <a class="" href="#">Soliq imtiyozlari</a> -->
-               <!-- <a class="" href="#">Grantlar</a> -->
                <a class="login-link" href="./pages/login/login.html">
                   <img src="./assets/img/auth/login-icon.svg" alt="" />
                   <span>Kirish</span>
                </a>
-               <a class="signup-link" href="#">Ro‘yxatdan o’tish</a>
+               <a class="signup-link" href="#" >Ro‘yxatdan o’tish</a>
             </nav>
          </header>
 
@@ -67,6 +63,7 @@
                            name="phone-number"
                            id="phone-number"
                            placeholder="00 000 00 00"
+                           inputmode="numeric"
                            maxlength="9" />
                      </div>
                   </div>
@@ -122,11 +119,11 @@
                         <span class="radio-label">BOSHQA</span>
                      </label>
                      <input
-                        class="input other-sum input-number"
+                        class="input other-sum input-number input-money"
                         name="6"
                         id="custom-amount"
                         type="text"
-                        value="0" />
+                        value="0"/>
                   </div>
                   <!-- Legal Entity -->
 
@@ -151,7 +148,7 @@
                      </div>
                   </div>
 
-                  <button class="submit sponsorship-submit" type="submit">Yuborish</button>
+                  <button class="btn btn-primary submit-btn sponsorship-submit" type="submit">Yuborish</button>
                </form>
             </section>
             <section class="data-sent-section">

@@ -152,7 +152,17 @@
    padding: 48px 120px 0;
    width: 100%;
    display: none;
+   animation: fade-effect 1s;
 }
+@keyframes fade-effect {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
 /* Payment Wrapper */
 .payment-status {
    display: flex;
