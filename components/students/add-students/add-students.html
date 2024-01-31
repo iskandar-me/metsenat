@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Talaba qo‘shish</title>
-  <link rel="stylesheet" href="../../../form/form.css">
-  <link rel="stylesheet" href="../../../../assets/css/style.css">
-  <link rel="stylesheet" href="../../../button/button.css">
+  <link rel="stylesheet" href="../../form/form.css">
+  <link rel="stylesheet" href="../../button/button.css">
+  <link rel="stylesheet" href="../../../assets/css/style.css">
   <link rel="stylesheet" href="./add-students.css">
 
 </head>
 <body>
-<div class="modal">
-  <header class="modal-header">
+<div class="page add-student-page">
+  <header class="page-header">
     <img class="to-back" src="../../../../assets/img/arrow-icons/to-back.svg" alt="">
-    <h2 class="modal__title">Talaba qo‘shish</h2>
+    <h2 class="page__title">Talaba qo‘shish</h2>
   </header>
   <form class="add-student-form">
     <div class="flex gap-7">
@@ -50,7 +50,7 @@
         <option value="">Toshkent moliya instituti</option>
       </select>
     </div>
-    <div class="flex gap-7">
+    <main class="flex gap-7">
       <div class="form-group">
         <label class="label" for="studentship-type">Talabalik turi</label>
         <select class="select" name="studentship-type" id="studentship-type">
@@ -61,12 +61,12 @@
       </div>
       <div class="form-group">
         <label class="label" for="tuition-fee">Kontrakt summa</label>
-        <input class="input input-number" type="text" name="tuition-fee" id="tuition-fee">
+        <input class="input input-number" type="text" name="tuition-fee" id="tuition-fee"  placeholder="300 000">
       </div>
-    </div>
+    </main>
     <hr class="hr-line">
-    <footer class="modal-footer">
-      <button class="btn btn-primary">+ Qo‘shish</button>
+    <footer class="page-footer">
+      <button class="btn btn-primary add-student-btn">+ Qo‘shish</button>
     </footer>
   </form>
 </div>

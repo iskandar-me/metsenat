@@ -8,19 +8,20 @@
   <link rel="stylesheet" href="../../../form/form.css">
   <link rel="stylesheet" href="../../../tab/tab.css">
   <link rel="stylesheet" href="./filter-sponsors.css">
+  <link rel="stylesheet" href="../../modal.css">
   <link rel="stylesheet" href="../../../../assets/css/style.css">
 </head>
 
 <body style="background-color: rgba(0, 0, 0,0.5);">
-  <form class="filter-sponsors-form ">
-    <div class="filter-header">
-      <h2 class="filter__title">
+  <form class="filter-sponsors-form modal">
+    <header class="modal-header">
+      <h2 class="modal__title">
         Filter
       </h2>
       <button class="btn close-btn">
         <img src="../../../../assets/img/crud/close.-icon.svg" alt="">
       </button>
-    </div>
+    </header>
     <div class="form-group">
       <label for="application-status" class="label">Ariza holati</label>
       <select class="select" name="" id="application-status">
@@ -31,7 +32,7 @@
         <option value="denied">Bekor qilingan</option>
       </select>
     </div>
-    <div class="">
+    <div >
       <label for="" class="label">To‘lov summasi</label>
         <div class="sponsorship-amount">
           <label for="6" class="radio">
@@ -96,16 +97,16 @@
       <label for="date" class="label">Sana</label>
       <input class="input" type="datetime-local">
     </div>
-    <div class="filter-sponsors-form__footer">
-      <button class="btn btn-secondary">
-        <img src="../../../../assets/img/crud/clear-icon.svg" alt="">
+    <footer class="filter-sponsors-form__footer modal-footer">
+      <button class="btn btn-secondary clear-btn">
+        <img src="../../../../assets/img/crud/clear-icon.svg" alt="Clear icon">
         Tozalash
       </button>
-      <button class="btn btn-primary">
-        <img src="../../../../assets/img/white-eye.svg" alt="">
+      <button class="btn btn-primary save-btn">
+        <img src="../../../../assets/img/white-eye.svg" alt="See the result">
         Natijalarni ko‘rish
       </button>
-    </div>
+    </footer>
   </form>
   <script src="../../../form/form.js"></script>
 </body>

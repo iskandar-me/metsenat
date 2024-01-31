@@ -259,9 +259,19 @@ a {
 }
 .flex {
    display: flex;
+   align-items: center;
+}
+.justify-between {
+   justify-content: space-between;
 }
 .gap-7{
    gap: 28px;
+}
+.gap-5{
+   gap: 20px;
+}
+.mb-8{
+   margin-bottom: 32px;
 }
 @media only screen and (max-width: 767px) {
    .main {

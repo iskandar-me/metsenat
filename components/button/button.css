@@ -44,3 +44,36 @@
    line-height: 24px;
    letter-spacing: -0.35px;
 }
+.btn.btn-ordinary {
+   color: #3365fc;
+   font-feature-settings: "clig" off, "liga" off;
+   font-family: "SF Pro Text", "Arial", sans-serif;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px;
+   letter-spacing: -0.35px;
+   border-radius: 5px;
+   background: #edf1fd;
+   display: flex;
+   text-align: center;
+   padding: 8px 32px;
+   gap: 10px;
+}
+.btn.btn-danger {
+   color: #ff4945;
+   font-feature-settings: "clig" off, "liga" off;
+   font-family: "SF Pro Text";
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px; /* 171.429% */
+   letter-spacing: -0.35px;
+   border-radius: 5px;
+   background: #ffeceb;
+   display: inline-flex;
+   padding: 8px 32px;
+   align-items: center;
+   gap: 4px;
+   flex-shrink: 0;
+}

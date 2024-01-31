@@ -1,0 +1,129 @@
+.student-detail-wrapper {
+   height: 100%;
+   width: 100%;
+}
+.detail-header {
+   display: flex;
+   padding: 23px 120px;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #fff;
+}
+.detail-header span {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+}
+.current-student-name {
+   color: var(--Dark-Dark-400, #28293d);
+   font-feature-settings: "clig" off, "liga" off;
+   font-family: "SF Pro Display", "Arial", sans-serif;
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 28px;
+   display: inline-block;
+}
+.detail-main {
+   background-color: #f5f5f7;
+   position: relative;
+   min-height: 100vh;
+   height: 100%;
+   width: 100%;
+}
+.detail-wrapper {
+   position: absolute;
+   top: 40px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.detail-wrapper section {
+   background-color: #fff;
+   padding: 32px 32px 24px;
+   margin-bottom: 40px;
+   border-radius: 12px;
+   border: 1px solid #ebeefc;
+   background: #fff;
+   box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.03);
+}
+.main__title {
+   color: var(--Dark-Dark-400, #28293d);
+   font-feature-settings: "clig" off, "liga" off;
+   font-family: "SF Pro Display", "Arial", sans-serif;
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 28px;
+}
+.s-detail__subtitle {
+   display: inline-flex;
+   padding: 2px 11px;
+   align-items: flex-start;
+   background: #e5ebff;
+   color: #36f;
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   letter-spacing: 1.125px;
+   text-transform: uppercase;
+   position: relative;
+   margin-bottom: 24px;
+}
+
+.s-detail__subtitle::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   display: inline-block;
+   width: 100%;
+   height: 1px;
+   background-color: #e4e8f0;
+   z-index: -1;
+}
+.student-logo {
+   border-radius: 6px;
+   border: 1px solid #e0e7ff;
+   background: linear-gradient(0deg, #eaecf0 0%, #eaecf0 100%),
+      url(<path-to-image>),
+      lightgray -77.701px 0.63px / 328.762% 164.381% no-repeat;
+   padding: 16px 18px;
+}
+.secondary-title {
+   color: #b5b5c3;
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   letter-spacing: 1.125px;
+   text-transform: uppercase;
+   display: block;
+   margin-bottom: 8px;
+}
+.detail-text {
+   color: #212121;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 130%;
+   letter-spacing: -0.16px;
+}
+.student__tel-number{
+   display: block;
+   margin-bottom: 34px;
+}
+.education-wrapper{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 24px;
+}
+.edit-sponsor-btn{
+cursor: pointer;
+border-radius: 4px;
+padding: 4px;
+transition: all 0.3s ease;
+}
+.edit-sponsor-btn:hover{
+   background-color: rgba(51, 102, 255,0.3);
+}

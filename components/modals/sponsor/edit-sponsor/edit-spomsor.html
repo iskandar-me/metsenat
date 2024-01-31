@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Edit sponsor | Metsenat</title>
+      <link rel="stylesheet" href="../../modal.css" />
+      <link rel="stylesheet" href="../../../form/form.css" />
+      <link rel="stylesheet" href="../../../button/button.css" />
+      <link rel="stylesheet" href="./edit-spomsor.css" />
+   </head>
+   <body>
+      <form class="modal edit-sponsor-modal">
+         <header class="modal-header">
+            <h2 class="modal__title">Homiylarni tahrirlash</h2>
+         </header>
+         <div class="form-group">
+            <label class="label" for="sponsors-name"
+               >F.I.Sh. (Familiya Ism Sharifingiz)</label
+            >
+            <select class="select" name="sponsors-name" id="sponsors-name">
+               <option value="">Ishmuhammedov Aziz Ishqobilovich</option>
+               <option value="">Saimov Rustam Saimjonovich</option>
+               <option value="">Sanginov Otabek Muratovich</option>
+               <option value="">Nazarov Sanjar Olimovich</option>
+               <option value="">Ibragimov Sohib Mirfayozovich</option>
+               <option value="">Ishmuhammedov Aziz Ishqobilovich</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="sponsorship-amount"
+               >Ajratilingan summa</label
+            >
+            <input
+               class="input input-number"
+               type="text"
+               placeholder="12 000 000 UZS"
+               value="12 000 000 UZS" />
+         </div>
+         <footer class="filter-sponsors-form__footer modal-footer">
+            <button class="btn btn-danger delete-sponsor-btn">
+               <img
+                  src="../../../../assets/img/crud/delete.svg"
+                  alt="" />Homiyni o‘chirish
+            </button>
+            <button class="btn btn-primary save-btn">
+               <img
+                  src="../../../../assets/img/crud/save.svg"
+                  alt="Save icon" />
+               Saqlash
+            </button>
+         </footer>
+      </form>
+      <script src="../../../form/form.js"></script>
+   </body>
+</html>
