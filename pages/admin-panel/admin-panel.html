@@ -9,6 +9,14 @@
       <link rel="stylesheet" href="../../components/button/button.css">
       <link rel="stylesheet" href="../../components/modals/modal.css">
       <link rel="stylesheet" href="../../components/modals/sponsor/filter-sponsors/filter-sponsors.css">
+      <link rel="stylesheet" href="../../components/modals/sponsor/edit-sponsors-info/edit-sponsors-info.css">
+      <link rel="stylesheet" href="../../components/sponsor/sponsor-detail/sponsor-detail.css">
+      <link rel="stylesheet" href="../../components/modals/student/add-sponsor-to-student/add-sponsor-to-student.css">
+      <link rel="stylesheet" href="../../components/students/add-students/add-students.css">
+      <link rel="stylesheet" href="../../components/modals/student/edit-students-sponsor/edit-students-sponsor.css">
+      <link rel="stylesheet" href="../../components/modals/student/edit-student/edit-student.css">
+
+      <link rel="stylesheet" href="../../components/students/student-detail/student-detail.css">
       <link rel="stylesheet" href="../../assets/css/style.css" />
 
       <link rel="stylesheet" href="./admin-panel.css" />
@@ -50,7 +58,7 @@
                   <input class="input search-input" type="text" placeholder="Search..." />
                   <img src="../../assets/img/search.svg" alt="" />
                </form>
-               <div class="filter-wrapper">
+               <div class="filter-wrapper open-sponsor-filter open-student-filter">
                 <img src="../../assets/img/filter.svg" alt="">
                 <span>Filter</span>
                </div>
@@ -87,7 +95,8 @@
             </div>
           </div>
           <div class="canvas-wrapper">
-            <canvas id="my-canvas" width="1200" height="400"></canvas>
+
+            <img  src="../../assets/img/graphmet.png" alt="Graph that shows statistics">
           </div>
          </section>
          <section id="sponsors" class="tab-content">
@@ -112,105 +121,106 @@
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>2</td>
+                  <tr class="trow">
+                     <td >2</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>3</td>
+                  <tr class="trow">
+                     <td >3</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>4</td>
+                  <tr class="trow">
+                     <td >4</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>5</td>
+                  <tr class="trow">
+                     <td >5</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>6</td>
+                  <tr class="trow">
+                     <td >6</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>7</td>
+                  <tr class="trow">
+                     <td >7</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>8</td>
+                  <tr class="trow">
+                     <td >8</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>9</td>
+                  <tr class="trow">
+                     <td >9</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr>
-                     <td>10</td>
+                  <tr class="trow">
+                     <td >10</td>
                      <td>Alimov Abror Xabibullayevich</td>
                      <td>+99899 973-72-60</td>
                      <td>30 000 000 UZS</td>
                      <td>0 UZS</td>
                      <td>15.01.2021</td>
-                     <td>Yangi</td>
-                     <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     <td class="sponsor-status">Tasqidlangan</td>
+                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
+
                </tbody>
             </table>
          </section>
          <section id="students" class="tab-content">
             <div class="add-student-btn-wrapper">
-               <button class="btn btn-primary add-student-btn">+ Talaba qo‘shish</button>
+               <button class="btn btn-primary open-add-student-btn">+ Talaba qo‘shish</button>
             </div>
             <div class="table-wrapper">
                <table class="table">
@@ -233,95 +243,98 @@
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>2</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>3</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>4</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>5</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>6</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>7</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>8</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>9</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
                      <tr class="trow">
-                        <td>10</td>
+                        <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
                         <td>Toshkent shahridagi INHA Universiteti</td>
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
-                        <td ><img class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
+
                   </tbody>
                </table>
             </div>
          </section>
       </div>
 
+      <!--=========== SPONSORS============ -->
+      <!-- Filter Sponsors Modal -->
       <form class="filter-sponsors-modal modal hidden">
          <div class="modal-header">
            <h2 class="modal__title">
@@ -404,24 +417,552 @@
          </div>
          <div class="form-group">
            <label for="date" class="label">Sana</label>
-           <input class="input" type="datetime-local">
+           <input class="input" type="date">
          </div>
          <div class="filter-sponsors-form__footer modal-footer">
            <button class="btn btn-secondary">
              <img src="../../../../assets/img/crud/clear-icon.svg" alt="Clear icon">
              Tozalash
            </button>
-           <button class="btn btn-primary">
+           <button class="btn btn-primary see-filtered-sponsors-btn">
              <img src="../../../../assets/img/white-eye.svg" alt="See the result">
              Natijalarni ko‘rish
            </button>
          </div>
        </form>
 
+       <!--Sponsor detail  -->
+       <div class="sponsor-detail-wrapper hidden">
+         <header class="detail-header">
+            <span class="">
+               <img
+                  class="to-back"
+                  src="../../../../assets/img/arrow-icons/to-back.svg"
+                  alt="" />
+               <h2 class="current-student-name">
+                  Ishmuhammedov Aziz Ishqobilovich
+               </h2>
+               <span class="sponsor__status">Tasdiqlangan</span>
+            </span>
+         </header>
+         <main class="detail-main">
+            <div class="detail-wrapper">
+               <section>
+                  <div class="flex justify-between mb-8">
+                     <h2 class="main__title">Homiy haqida</h2>
+                     <button class="btn btn-ordinary edit-sponsors-info-btn">
+                        <img
+                           src="../../../assets/img/crud/edit-icon.svg"
+                           alt="Edit Icon" />
+                        Tahrirlash
+                     </button>
+                  </div>
+
+                  <div class="flex gap-5">
+                     <img
+                        class="sponsor-logo"
+                        src="../../../assets/img/sponsor-picture.svg"
+                        alt="Picture of Sponsor" />
+                     <h3 class="student-name detail-text">
+                        Isfandiyorov Iqbol Bobomirzayevich
+                     </h3>
+                  </div>
+
+                  <div class="education-wrapper">
+                     <div class="">
+                        <label class="secondary-title">telefon raqam</label>
+                        <span class="student__tel-number detail-text"
+                           >+998 99 973-72-60</span
+                        >
+                     </div>
+                     <div class="">
+                        <label class="secondary-title">Homiylik summasi</label>
+                        <span class="detail-text">30 000 000 UZS</span>
+                     </div>
+                     <div class="">
+                        <label class="secondary-title">Tashkilot nomi</label>
+                        <span class="detail-text">Orient Group Corporation</span>
+                     </div>
+
+                  </div>
+               </section>
+
+            </div>
+         </main>
+      </div>
+
+      <!-- Edit Sponsors Info Detail -->
+      <form class="edit-sponsors-info-modal modal hidden">
+         <header class="modal-header">
+            <h2 class="modal__title">Tahrirlash</h2>
+            <button class="btn close-btn">
+               <img src="../../../../assets/img/crud/close.-icon.svg" alt="" />
+            </button>
+         </header>
+         <div class="form-group">
+            <label for="student-full-name" class="label"
+               >F.I.Sh. (Familiya Ism Sharif)</label
+            >
+            <input
+               type="text"
+               class="input"
+               id="student-full-name"
+               value="Ishmuhammedov Aziz Ishqobilovich" />
+         </div>
+         <div class="form-group">
+            <label for="student-number" class="label">Telefon raqam</label>
+            <div class="form__phone-group">
+               <span>+998</span>
+               <input
+                  class="input input-phone input-number"
+                  type="text"
+                  name="student-number"
+                  id="student-number"
+                  placeholder="00 000 00 00"
+                  maxlength="9"
+                  value="973-72-60" />
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="university" class="label">Holati</label>
+            <select class="select" name="university" id="university">
+               <option value="">Tasqidlangan</option>
+               <option value="">Yangi</option>
+               <option value="">Moderatsiyada</option>
+               <option value="">Bekor qilingan</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="sponsorship-amount"
+               >Homiylik summasi</label
+            >
+            <select class="select" name="" id="sponsorship-amount">
+               <option value="">30 000 000 UZS</option>
+               <option value="">25 000 000 UZS</option>
+               <option value="">20 000 000 UZS</option>
+               <option value="">15 000 000 UZS</option>
+               <option value="">10 000 000 UZS</option>
+               <option value="">7 000 000 UZS</option>
+               <option value="">5 000 000 UZS</option>
+               <option value="">3 000 000 UZS</option>
+               <option value="">1 000 000 UZS</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="sponsorship-amount">To‘lov turi</label>
+            <select class="select" name="" id="sponsorship-amount">
+               <option value="">Pul ko'chirish</option>
+               <option value="">Naqd pul</option>
+               <option value="">Plastik karta</option>
+            </select>
+         </div>
+         <div class="legal-entity-wrapper">
+          <div class="form-group">
+             <input
+                type="checkbox"
+                name="LegalEntity"
+                id="LegalEntity" />
+             <label for="LegalEntity">Yuridik shaxs nomidan</label>
+          </div>
+          <div class="legal-entity-el hidden">
+             <label for="org-name" class="label"
+                >Tashkilot nomi</label
+             >
+             <input
+                class="input org-name"
+                type="text"
+                placeholder="Orient group"
+                name="org-name"
+                id="org-name"
+                value="Orient Group Corporation"/>
+          </div>
+       </div>
+         <footer class="filter-sponsors-form__footer modal-footer">
+            <button class="btn btn-primary save-btn">
+               <img
+                  src="../../../../assets/img/crud/save.svg"
+                  alt="Save icon" />
+               Saqlash
+            </button>
+         </footer>
+      </form>
+
+
+       <!--============= STUDENTS=========== -->
+       <!-- Filter students modal -->
+       <form class="filter-sponsors-form modal hidden">
+         <header class="modal-header">
+            <h2 class="modal__title">Filter</h2>
+            <button class="btn close-btn">
+               <img src="../../../../assets/img/crud/close.-icon.svg" alt="" />
+            </button>
+         </header>
+         <div class="form-group">
+          <label class="label" for="education-type">Talabalik turi</label>
+          <select class="select" name="education-type" id="education-type">
+            <option value="">barchasi</option>
+            <option value="">bakalavr</option>
+            <option value="">magistr</option>
+          </select>
+         </div>
+         <div class="form-group">
+          <label for="university" class="label">OTM</label>
+          <select class="select" name="university" id="university">
+            <option value="">OTM ni tanlang</option>
+            <option value="">Toshkent shahridagi INHA Universiteti</option>
+            <option value="">O’zbekiston milliy universiteti</option>
+            <option value="">Toshkent davlat texnika universiteti</option>
+            <option value="">Toshkent davlat iqtisodiyot universiteti</option>
+            <option value="">O’zbekiston davlat jahon tillari universiteti</option>
+            <option value="">Toshkent davlat sharqshunoslik instituti</option>
+            <option value="">Toshkent to’qimachilik va нngil sanoat istituti</option>
+            <option value="">Toshkent arxitektura-qurilish instituti</option>
+            <option value="">Toshkent moliya instituti</option>
+          </select>
+        </div>
+         <footer class="filter-sponsors-form__footer modal-footer">
+            <button class="btn btn-secondary clear-btn">
+               <img
+                  src="../../../../assets/img/crud/clear-icon.svg"
+                  alt="Clear icon" />
+               Tozalash
+            </button>
+            <button class="btn btn-primary save-btn">
+               <img
+                  src="../../../../assets/img/white-eye.svg"
+                  alt="See the result" />
+               Natijalarni ko‘rish
+            </button>
+         </footer>
+      </form>
+       <!-- Add student  -->
+       <div class="page add-student-page hidden">
+         <header class="page-header">
+           <img class="to-back" src="../../../../assets/img/arrow-icons/to-back.svg" alt="">
+           <h2 class="page__title">Talaba qo‘shish</h2>
+         </header>
+         <form class="add-student-form">
+           <div class="flex gap-7">
+             <div class="form-group">
+               <label for="student-full-name" class="label">F.I.Sh. (Familiya Ism Sharif)</label>
+               <input type="text" class="input" id="student-full-name">
+             </div>
+             <div class="form-group">
+               <label for="student-number" class="label">Telefon raqam</label>
+               <div class="form__phone-group">
+                 <span>+998</span>
+                 <input  class="input input-phone input-number"
+                    type="text"
+                    name="student-number"
+                    id="student-number"
+                    placeholder="00 000 00 00"
+                    maxlength="9" />
+              </div>
+             </div>
+           </div>
+           <div class="form-group">
+             <label for="university" class="label">OTM</label>
+             <select class="select" name="university" id="university">
+               <option value="">OTM ni tanlang</option>
+               <option value="">Toshkent shahridagi INHA Universiteti</option>
+               <option value="">O’zbekiston milliy universiteti</option>
+               <option value="">Toshkent davlat texnika universiteti</option>
+               <option value="">Toshkent davlat iqtisodiyot universiteti</option>
+               <option value="">O’zbekiston davlat jahon tillari universiteti</option>
+               <option value="">Toshkent davlat sharqshunoslik instituti</option>
+               <option value="">Toshkent to’qimachilik va нngil sanoat istituti</option>
+               <option value="">Toshkent arxitektura-qurilish instituti</option>
+               <option value="">Toshkent moliya instituti</option>
+             </select>
+           </div>
+           <main class="flex gap-7">
+             <div class="form-group">
+               <label class="label" for="studentship-type">Talabalik turi</label>
+               <select class="select" name="studentship-type" id="studentship-type">
+                 <option value="">Barchasi</option>
+                 <option value="">Bakalavr</option>
+                 <option value="">Magistr</option>
+               </select>
+             </div>
+             <div class="form-group">
+               <label class="label" for="tuition-fee">Kontrakt summa</label>
+               <input class="input input-number" type="text" name="tuition-fee" id="tuition-fee"  placeholder="300 000">
+             </div>
+           </main>
+           <hr class="hr-line">
+           <footer class="page-footer">
+             <button class="btn btn-primary add-student-btn">+ Qo‘shish</button>
+           </footer>
+         </form>
+       </div>
+       <!-- Student Detail  -->
+       <div class="student-detail-wrapper hidden">
+         <header class="detail-header">
+            <span class="">
+               <img
+                  class="to-back"
+                  src="../../../../assets/img/arrow-icons/to-back.svg"
+                  alt="" />
+               <h2 class="current-student-name">
+                  Isfandiyorov Iqbol Bobomirzayevich
+               </h2>
+            </span>
+            <button class="btn btn-ordinary add-sponsor-btn">+ Homiy qo‘shish</button>
+         </header>
+         <main class="detail-main">
+            <div class="detail-wrapper">
+               <section>
+                  <div class="flex justify-between mb-8">
+                     <h2 class="main__title">Talaba haqida</h2>
+                     <button class="btn btn-ordinary edit-student-btn">
+                        <img
+                           src="../../../assets/img/crud/edit-icon.svg"
+                           alt="Edit Icon" />
+                        Tahrirlash
+                     </button>
+                  </div>
+                  <h3 class="s-detail__subtitle">Asosiy ma’lumotlar</h3>
+                  <div class="flex gap-5">
+                     <img
+                        class="student-logo"
+                        src="../../../assets/img/student-logo.svg"
+                        alt="" />
+                     <h3 class="student-name detail-text">
+                        Isfandiyorov Iqbol Bobomirzayevich
+                     </h3>
+                  </div>
+                  <div class="">
+                     <label class="secondary-title">telefon raqam</label>
+                     <span class="student__tel-number detail-text"
+                        >+998 99 973-72-60</span
+                     >
+                  </div>
+                  <div class="s-detail__subtitle">
+                     O‘qish joyi haqida ma’lumot
+                  </div>
+                  <div class="education-wrapper">
+                     <div class="">
+                        <label class="secondary-title">OTM</label>
+                        <span class="detail-text"
+                           >O’zbekiston davlat jahon tillari universiteti</span
+                        >
+                     </div>
+                     <div class="">
+                        <label class="secondary-title">Talabalik turi</label>
+                        <span class="detail-text">Bakalavr</span>
+                     </div>
+                     <div class="">
+                        <label class="secondary-title"
+                           >Ajratilingan summa</label
+                        >
+                        <span class="detail-text">14 000 000 UZS</span>
+                     </div>
+                     <div class="">
+                        <label class="secondary-title">Kontrakt miqdori</label>
+                        <span class="detail-text">30 000 000 UZS</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <header class="flex justify-between">
+                     <h2>Talabaga homiylar</h2>
+                     <button class="btn btn-ordinary add-sponsor-btn">+ Homiy qo‘shish</button>
+                  </header>
+                  <div class="table-wrapper">
+                     <table class="table">
+                        <thead class="thead">
+                           <tr class="trow">
+                              <th>#</th>
+                              <th>f.i.sh</th>
+                              <th>Ajratilingan summa</th>
+                              <th>Amallar</th>
+                           </tr>
+                        </thead>
+                        <tbody class="tbody">
+                           <tr class="trow">
+                              <td>1</td>
+                              <td>Saimov Rustam Saimjonovich</td>
+                              <td>1 000 000 UZS</td>
+                              <td>
+                                 <img class="edit-students-sponsor-btn"
+                                    src="../../../assets/img/crud/edit-icon.svg"
+                                    alt="" />
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </section>
+            </div>
+         </main>
+      </div>
+
+      <!-- Add Sponsor to student Modal -->
+      <form class="modal add-sponsor-modal hidden">
+         <header class="modal-header">
+            <h2 class="modal__title">Homiy qo‘shish</h2>
+            <button class="btn close-btn">
+              <img src="../../../../assets/img/crud/close.-icon.svg" alt="">
+            </button>
+         </header>
+         <div class="form-group">
+            <label class="label" for="sponsors-name"
+               >F.I.Sh. (Familiya Ism Sharifingiz)</label
+            >
+            <select class="select" name="sponsors-name" id="sponsors-name">
+               <option value="">Homiyni tanlang</option>
+               <option value="">Ishmuhammedov Aziz Ishqobilovich</option>
+               <option value="">Saimov Rustam Saimjonovich</option>
+               <option value="">Sanginov Otabek Muratovich</option>
+               <option value="">Nazarov Sanjar Olimovich</option>
+               <option value="">Ibragimov Sohib Mirfayozovich</option>
+               <option value="">Ishmuhammedov Aziz Ishqobilovich</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="sponsorship-amount"
+               >Ajratilingan summa</label
+            >
+            <input
+               class="input input-number"
+               type="text"
+               placeholder="12 000 000 UZS" />
+         </div>
+         <footer class="filter-sponsors-form__footer modal-footer">
+            <button class="btn btn-primary save-btn">+ Saqlash</button>
+         </footer>
+      </form>
+
+       <!-- Edit Student Modal -->
+       <form class="edit-student-modal modal hidden">
+         <header class="modal-header">
+            <h2 class="modal__title">Tahrirlash</h2>
+            <button class="btn close-btn">
+               <img src="../../../../assets/img/crud/close.-icon.svg" alt="" />
+            </button>
+         </header>
+         <div class="form-group">
+            <label for="student-full-name" class="label"
+               >F.I.Sh. (Familiya Ism Sharif)</label
+            >
+            <input type="text" class="input" id="student-full-name"  value="Ishmuhammedov Aziz Ishqobilovich"/>
+         </div>
+         <div class="form-group">
+            <label for="student-number" class="label">Telefon raqam</label>
+            <div class="form__phone-group">
+               <span>+998</span>
+               <input
+                  class="input input-phone input-number"
+                  type="text"
+                  name="student-number"
+                  id="student-number"
+                  placeholder="00 000 00 00"
+                  maxlength="9"
+                  value="973-72-60"/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="university" class="label">OTM</label>
+            <select class="select" name="university" id="university">
+               <option value="">Toshkent shahridagi INHA Universiteti</option>
+               <option value="">O’zbekiston milliy universiteti</option>
+               <option value="">Toshkent davlat texnika universiteti</option>
+               <option value="">
+                  Toshkent davlat iqtisodiyot universiteti
+               </option>
+               <option value="">
+                  O’zbekiston davlat jahon tillari universiteti
+               </option>
+               <option value="">
+                  Toshkent davlat sharqshunoslik instituti
+               </option>
+               <option value="">
+                  Toshkent to’qimachilik va нngil sanoat istituti
+               </option>
+               <option value="">Toshkent arxitektura-qurilish instituti</option>
+               <option value="">Toshkent moliya instituti</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="tuition-fee">Kontrakt summa</label>
+            <input
+               class="input input-number"
+               type="text"
+               name="tuition-fee"
+               id="tuition-fee"
+               placeholder="300 000"
+               value="30 000 000 UZS"/>
+         </div>
+         <footer class="filter-sponsors-form__footer modal-footer">
+
+            <button class="btn btn-primary save-btn">
+               <img src="../../../../assets/img/crud/save.svg" alt="Save icon" />
+               Saqlash
+            </button>
+         </footer>
+      </form>
+
+      <!-- Edit Student's Sponsor modal -->
+      <form class="modal edit-students-sponsor-modal hidden">
+         <header class="modal-header">
+            <h2 class="modal__title">Homiylarni tahrirlash</h2>
+         </header>
+         <div class="form-group">
+            <label class="label" for="sponsors-name"
+               >F.I.Sh. (Familiya Ism Sharifingiz)</label
+            >
+            <select class="select" name="sponsors-name" id="sponsors-name">
+               <option value="">Ishmuhammedov Aziz Ishqobilovich</option>
+               <option value="">Saimov Rustam Saimjonovich</option>
+               <option value="">Sanginov Otabek Muratovich</option>
+               <option value="">Nazarov Sanjar Olimovich</option>
+               <option value="">Ibragimov Sohib Mirfayozovich</option>
+               <option value="">Ishmuhammedov Aziz Ishqobilovich</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="sponsorship-amount"
+               >Ajratilingan summa</label
+            >
+            <input
+               class="input input-number"
+               type="text"
+               placeholder="12 000 000 UZS"
+               value="12 000 000 UZS" />
+         </div>
+         <footer class="filter-sponsors-form__footer modal-footer">
+            <button class="btn btn-danger delete-sponsor-btn">
+               <img
+                  src="../../../../assets/img/crud/delete.svg"
+                  alt="" />Homiyni o‘chirish
+            </button>
+            <button class="btn btn-primary save-btn">
+               <img
+                  src="../../../../assets/img/crud/save.svg"
+                  alt="Save icon" />
+               Saqlash
+            </button>
+         </footer>
+      </form>
+
+
+      <!-- Overlay -->
       <div class="overlay hidden"></div>
 
 
-      <script src="../../components/modals/student/"></script>
+      <script src="../../components/modals/sponsor/filter-sponsors/filter-sponsors.js"></script>
+      <script src="../../components/sponsor/sponsor-detail/sponsor-detail.js"></script>
+      <script src="../../components/modals/sponsor/edit-sponsors-info/edit-sponsors-info.js"></script>
+
+      <script src="../../components/students/student-detail/student-detail.js"></script>
+      <script src="../../components/modals/student/edit-student/edit-student.js"></script>
+      <script src="../../components/modals/student/filter-students/filter-student.js"></script>
+      <script src="../../components/modals/student/add-sponsor-to-student/add-sponsor-to-student.js"></script>
+      <script src="../../components/modals/student/edit-students-sponsor/edit-students-sponsor.js"></script>
+      <script src="../../components/students/add-students/add-students.js"></script>
+
+      <script src="../../components/form/form.js"></script>
+      <script src="../../js/script.js"></script>
       <script src="./admin-panel.js"></script>
 
    </body>

@@ -1,0 +1,15 @@
+.sponsor__status {
+   background: rgba(51, 214, 159, 0.171);
+   color: #33d69f;
+   padding: 5px 4px;
+   border-radius: 5px;
+}
+.sponsor-logo{
+  border-radius: 6px;
+  border: 1px solid #e0e7ff;
+  background: linear-gradient(0deg, #eaecf0 0%, #eaecf0 100%),
+     url(<path-to-image>),
+     lightgray -77.701px 0.63px / 328.762% 164.381% no-repeat;
+  padding: 16px 18px;
+  margin-bottom: 28px;
+}

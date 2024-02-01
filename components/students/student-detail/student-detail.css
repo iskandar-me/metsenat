@@ -38,6 +38,7 @@
    transform: translateX(-50%);
 }
 .detail-wrapper section {
+   width: 100%;
    background-color: #fff;
    padding: 32px 32px 24px;
    margin-bottom: 40px;
@@ -89,6 +90,7 @@
       url(<path-to-image>),
       lightgray -77.701px 0.63px / 328.762% 164.381% no-repeat;
    padding: 16px 18px;
+   margin-bottom: 28px;
 }
 .secondary-title {
    color: #b5b5c3;
@@ -118,12 +120,12 @@
    grid-template-columns: repeat(2,1fr);
    gap: 24px;
 }
-.edit-sponsor-btn{
+.edit-students-sponsor-btn{
 cursor: pointer;
 border-radius: 4px;
 padding: 4px;
 transition: all 0.3s ease;
 }
-.edit-sponsor-btn:hover{
+.edit-students-sponsor-btn:hover{
    background-color: rgba(51, 102, 255,0.3);
 }

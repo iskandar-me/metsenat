@@ -100,7 +100,7 @@
    flex-direction: column;
    gap: 8px;
 }
-.legal-entity-el.hiddden {
+.legal-entity-el.hidden {
    display: none;
 }
 

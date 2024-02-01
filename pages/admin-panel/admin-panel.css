@@ -69,6 +69,8 @@
    justify-content: space-between;
    align-items: center;
    padding: 24px 120px;
+   position: sticky;
+   top: 0px;
 }
 .tab {
    display: flex;
@@ -256,6 +258,7 @@
 .trow td:nth-child(5) {
    font-weight: 500;
 }
+
 .eye-icon {
    cursor: pointer;
    padding: 4px;
@@ -264,6 +267,12 @@
 }
 .eye-icon:hover{
    background-color: rgba(51, 102, 255,0.3);
+}
+.eye-icon:active{
+   transform: scale(0.95);
+}
+.trow .sponsor-status {
+   color: #03ba71;
 }
 /* STUDENTS */
 #students {

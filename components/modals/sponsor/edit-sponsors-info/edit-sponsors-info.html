@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="../../../button/button.css" />
+      <link rel="stylesheet" href="../../../form/form.css" />
+      <link rel="stylesheet" href="../../../modals/modal.css" />
+      <link
+         rel="stylesheet"
+         href="../../../students/student-detail/student-detail.css" />
+      <link rel="stylesheet" href="../../../assets/css/style.css" />
+   </head>
+   <body>
+      <form class="edit-sponsors-info-modal modal">
+         <header class="modal-header">
+            <h2 class="modal__title">Tahrirlash</h2>
+            <button class="btn close-btn">
+               <img src="../../../../assets/img/crud/close.-icon.svg" alt="" />
+            </button>
+         </header>
+         <div class="form-group">
+            <label for="student-full-name" class="label"
+               >F.I.Sh. (Familiya Ism Sharif)</label
+            >
+            <input
+               type="text"
+               class="input"
+               id="student-full-name"
+               value="Ishmuhammedov Aziz Ishqobilovich" />
+         </div>
+         <div class="form-group">
+            <label for="student-number" class="label">Telefon raqam</label>
+            <div class="form__phone-group">
+               <span>+998</span>
+               <input
+                  class="input input-phone input-number"
+                  type="text"
+                  name="student-number"
+                  id="student-number"
+                  placeholder="00 000 00 00"
+                  maxlength="9"
+                  value="973-72-60" />
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="university" class="label">Holati</label>
+            <select class="select" name="university" id="university">
+               <option value="">Tasqidlangan</option>
+               <option value="">Yangi</option>
+               <option value="">Moderatsiyada</option>
+               <option value="">Bekor qilingan</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="sponsorship-amount"
+               >Homiylik summasi</label
+            >
+            <select class="select" name="" id="sponsorship-amount">
+               <option value="">30 000 000 UZS</option>
+               <option value="">25 000 000 UZS</option>
+               <option value="">20 000 000 UZS</option>
+               <option value="">15 000 000 UZS</option>
+               <option value="">10 000 000 UZS</option>
+               <option value="">7 000 000 UZS</option>
+               <option value="">5 000 000 UZS</option>
+               <option value="">3 000 000 UZS</option>
+               <option value="">1 000 000 UZS</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label class="label" for="sponsorship-amount">To‘lov turi</label>
+            <select class="select" name="" id="sponsorship-amount">
+               <option value="">Pul ko'chirish</option>
+               <option value="">Naqd pul</option>
+               <option value="">Plastik karta</option>
+            </select>
+         </div>
+         <div class="legal-entity-wrapper">
+          <div class="form-group">
+             <input
+                type="checkbox"
+                name="LegalEntity"
+                id="LegalEntity" />
+             <label for="LegalEntity">Yuridik shaxs nomidan</label>
+          </div>
+          <div class="legal-entity-el hidden">
+             <label for="org-name" class="label"
+                >Tashkilot nomi</label
+             >
+             <input
+                class="input org-name"
+                type="text"
+                placeholder="Orient group"
+                name="org-name"
+                id="org-name" />
+          </div>
+       </div>
+         <footer class="filter-sponsors-form__footer modal-footer">
+            <button class="btn btn-primary save-btn">
+               <img
+                  src="../../../../assets/img/crud/save.svg"
+                  alt="Save icon" />
+               Saqlash
+            </button>
+         </footer>
+      </form>
+      <script src="../../../../js/script.js"></script>
+   </body>
+</html>

@@ -3,22 +3,27 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Edit sponsor | Metsenat</title>
+      <title>Homiy qo‘shish</title>
       <link rel="stylesheet" href="../../modal.css" />
-      <link rel="stylesheet" href="../../../form/form.css" />
       <link rel="stylesheet" href="../../../button/button.css" />
-      <link rel="stylesheet" href="./edit-spomsor.css" />
+      <link rel="stylesheet" href="../../../form/form.css" />
+      <link rel="stylesheet" href="../../../../assets/css/style.css" />
+      <link rel="stylesheet" href="./add-sponsor-to-student.css" />
    </head>
    <body>
-      <form class="modal edit-sponsor-modal">
+      <form class="modal add-sponsor-modal">
          <header class="modal-header">
-            <h2 class="modal__title">Homiylarni tahrirlash</h2>
+            <h2 class="modal__title">Homiy qo‘shish</h2>
+            <button class="btn close-btn">
+              <img src="../../../../assets/img/crud/close.-icon.svg" alt="">
+            </button>
          </header>
          <div class="form-group">
             <label class="label" for="sponsors-name"
                >F.I.Sh. (Familiya Ism Sharifingiz)</label
             >
             <select class="select" name="sponsors-name" id="sponsors-name">
+               <option value="">Homiyni tanlang</option>
                <option value="">Ishmuhammedov Aziz Ishqobilovich</option>
                <option value="">Saimov Rustam Saimjonovich</option>
                <option value="">Sanginov Otabek Muratovich</option>
@@ -34,21 +39,10 @@
             <input
                class="input input-number"
                type="text"
-               placeholder="12 000 000 UZS"
-               value="12 000 000 UZS" />
+               placeholder="12 000 000 UZS" />
          </div>
          <footer class="filter-sponsors-form__footer modal-footer">
-            <button class="btn btn-danger delete-sponsor-btn">
-               <img
-                  src="../../../../assets/img/crud/delete.svg"
-                  alt="" />Homiyni o‘chirish
-            </button>
-            <button class="btn btn-primary save-btn">
-               <img
-                  src="../../../../assets/img/crud/save.svg"
-                  alt="Save icon" />
-               Saqlash
-            </button>
+            <button class="btn btn-primary save-btn">+ Saqlash</button>
          </footer>
       </form>
       <script src="../../../form/form.js"></script>
