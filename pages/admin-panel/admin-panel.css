@@ -265,10 +265,10 @@
    border-radius: 4px;
    transition: all 0.3s ease;
 }
-.eye-icon:hover{
-   background-color: rgba(51, 102, 255,0.3);
+.eye-icon:hover {
+   background-color: rgba(51, 102, 255, 0.3);
 }
-.eye-icon:active{
+.eye-icon:active {
    transform: scale(0.95);
 }
 .trow .sponsor-status {

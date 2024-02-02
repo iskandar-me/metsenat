@@ -43,10 +43,10 @@
       <div class="container">
          <section class="navigation">
             <div class="tab">
-               <button class="tablink" onclick="openTab(event,'dashboard')" id="defaultOpen">
+               <button class="tablink" onclick="openTab(event,'dashboard')">
                   Dashboard
                </button>
-               <button class="tablink" onclick="openTab(event,'sponsors')" >
+               <button class="tablink" onclick="openTab(event,'sponsors')"  id="defaultOpen">
                   Homiylar
                </button>
                <button class="tablink" onclick="openTab(event,'students')"  >
@@ -113,7 +113,7 @@
                      <th>Amallar</th>
                   </tr>
                </thead>
-               <tbody class="tbody">
+               <tbody id="sponsors-table-body"class="tbody">
                   <tr class="trow">
                      <td >1</td>
                      <td>Alimov Abror Xabibullayevich</td>
@@ -124,96 +124,7 @@
                      <td class="sponsor-status">Tasqidlangan</td>
                      <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                   </tr>
-                  <tr class="trow">
-                     <td >2</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >3</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >4</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >5</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >6</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >7</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >8</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >9</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
-                  <tr class="trow">
-                     <td >10</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
+
 
                </tbody>
             </table>
@@ -235,7 +146,7 @@
                         <th>Amallar</th>
                      </tr>
                   </thead>
-                  <tbody class="tbody">
+                  <tbody id="studens-table-body" class="tbody">
                      <tr class="trow">
                         <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
@@ -245,88 +156,6 @@
                         <td>30 000 000 UZS</td>
                         <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
                      </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-                     <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
-
                   </tbody>
                </table>
             </div>
@@ -962,7 +791,8 @@
       <script src="../../components/students/add-students/add-students.js"></script>
 
       <script src="../../components/form/form.js"></script>
-      <script src="../../js/script.js"></script>
+      <!-- <script src="../../js/script.js"></script> -->
+      <script type="module" src="./sponsors-table.js"></script>
       <script src="./admin-panel.js"></script>
 
    </body>
