@@ -264,13 +264,13 @@ a {
 .justify-between {
    justify-content: space-between;
 }
-.gap-7{
+.gap-7 {
    gap: 28px;
 }
-.gap-5{
+.gap-5 {
    gap: 20px;
 }
-.mb-8{
+.mb-8 {
    margin-bottom: 32px;
 }
 @media only screen and (max-width: 767px) {
@@ -283,7 +283,6 @@ a {
    .header {
       width: 100%;
       padding: 14px 24px;
-
    }
    .navbar {
       width: inherit;
@@ -368,6 +367,19 @@ a {
       height: 100vh;
       padding: 28px 36px;
    }
+}
+
+.moderatsiyada {
+   color: #ffa445 !important;
+}
+.yangi {
+   color: #36f !important;
+}
+.tasdiqlangan {
+   color: #20d592 !important;
+}
+.bekor {
+   color: #979797 !important;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
    only screen and (min--moz-device-pixel-ratio: 2),

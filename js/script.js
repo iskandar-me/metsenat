@@ -38,12 +38,12 @@ radioLabels.forEach((label) => {
       if (this.parentNode.classList.contains("checked")) {
          // console.log(this.parentNode.textContent.trim());
 
-         let { sponsoorshipAmount } = sponsorsData;
-         sponsoorshipAmount = this.parentNode.textContent.trim();
+         // let { sponsoorshipAmount } = sponsorsData;
+         // sponsoorshipAmount = this.parentNode.textContent.trim();
 
 
-         console.log(sponsorsData[0].name, "sponsoeas");
-         console.log("Sponsorship amount is ", sponsoorshipAmount);
+         // console.log(sponsorsData[0].name, "sponsoeas");
+         // console.log("Sponsorship amount is ", sponsoorshipAmount);
       }
    });
 });

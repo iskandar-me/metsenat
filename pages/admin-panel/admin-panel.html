@@ -17,9 +17,9 @@
       <link rel="stylesheet" href="../../components/modals/student/edit-student/edit-student.css">
 
       <link rel="stylesheet" href="../../components/students/student-detail/student-detail.css">
-      <link rel="stylesheet" href="../../assets/css/style.css" />
 
       <link rel="stylesheet" href="./admin-panel.css" />
+      <link rel="stylesheet" href="../../assets/css/style.css" />
    </head>
    <body class="admin-body">
       <header class="header">
@@ -53,16 +53,7 @@
                   Talabalar
                </button>
             </div>
-            <div class="search-panel">
-               <form class="search-form">
-                  <input class="input search-input" type="text" placeholder="Search..." />
-                  <img src="../../assets/img/search.svg" alt="" />
-               </form>
-               <div class="filter-wrapper open-sponsor-filter open-student-filter">
-                <img src="../../assets/img/filter.svg" alt="">
-                <span>Filter</span>
-               </div>
-            </div>
+
          </section>
          <section id="dashboard"  class="tab-content" >
           <div class="payment-status">
@@ -100,37 +91,82 @@
           </div>
          </section>
          <section id="sponsors" class="tab-content">
-            <table class="table">
-               <thead class="thead">
-                  <tr class="trow">
-                     <th>#</th>
-                     <th>f.i.sh.</th>
-                     <th>Tel.Raqami</th>
-                     <th>Homiylik summasi</th>
-                     <th>Sarflangan summa</th>
-                     <th>Sana</th>
-                     <th>Holati</th>
-                     <th>Amallar</th>
-                  </tr>
-               </thead>
-               <tbody id="sponsors-table-body"class="tbody">
-                  <tr class="trow">
-                     <td >1</td>
-                     <td>Alimov Abror Xabibullayevich</td>
-                     <td>+99899 973-72-60</td>
-                     <td>30 000 000 UZS</td>
-                     <td>0 UZS</td>
-                     <td>15.01.2021</td>
-                     <td class="sponsor-status">Tasqidlangan</td>
-                     <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                  </tr>
+            <div class="actions-with-students">
+               <form class="search-form">
+                  <input class="input search-input" type="text" placeholder="Search..." />
+                  <img src="../../assets/img/search.svg" alt="" />
+               </form>
+               <div class="filter-wrapper open-sponsor-filter ">
+                <img src="../../assets/img/filter.svg" alt="">
+                <span>Filter</span>
+               </div>
+            </div>
+            <div class="table-wrapper">
+
+               <table class="table">
+                  <thead class="thead">
+                     <tr class="trow">
+                        <th>#</th>
+                        <th>f.i.sh.</th>
+                        <th>Tel.Raqami</th>
+                        <th>Homiylik summasi</th>
+                        <th>Sarflangan summa</th>
+                        <th>Sana</th>
+                        <th>Holati</th>
+                        <th>Amallar</th>
+                     </tr>
+                  </thead>
+                  <tbody id="sponsors-table-body"class="tbody">
+                     <!-- <tr class="trow">
+                        <td >1</td>
+                        <td>Alimov Abror Xabibullayevich</td>
+                        <td>+99899 973-72-60</td>
+                        <td>30 000 000 UZS</td>
+                        <td>0 UZS</td>
+                        <td>15.01.2021</td>
+                        <td class="sponsor-status">Tasqidlangan</td>
+                        <td ><img onclick="openSponsorDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
+                     </tr> -->
 
 
-               </tbody>
-            </table>
+                  </tbody>
+               </table>
+            </div>
+            <div class="pagination">
+               <div class="pagination__info-sponsor">
+                  <!-- 59 tadan  1-10 ko‘rsatilmoqda -->
+               </div>
+               <div class=" flex justify-between gap-5">
+                  <form class="flex gap-5">
+                     <label for="pagination-count">Ko‘rsatish</label>
+                     <select class="select" name="pagination-count" id="pagination-count">
+                        <option  class="paginationed-data-option" value="10">10</option>
+                        <option class="paginationed-data-option" value="20">20</option>
+                        <option class="paginationed-data-option" value="30">30</option>
+                     </select>
+                  </form>
+                  <div class="pagination-container">
+                     <!-- <button disabled></button>
+                     <button class="current-page btn">1</button>
+                     <button >2</button>
+                     <button>...</button>
+                     <button>9</button>
+                     <button>10</button>
+                     <button></button> -->
+                  </div>
+               </div>
+            </div>
          </section>
          <section id="students" class="tab-content">
-            <div class="add-student-btn-wrapper">
+            <div class="actions-with-students">
+               <form class="search-form">
+                  <input class="input search-input" type="text" placeholder="Search..." />
+                  <img src="../../assets/img/search.svg" alt="" />
+               </form>
+               <div class="filter-wrapper open-student-filter">
+                <img src="../../assets/img/filter.svg" alt="">
+                <span>Filter</span>
+               </div>
                <button class="btn btn-primary open-add-student-btn">+ Talaba qo‘shish</button>
             </div>
             <div class="table-wrapper">
@@ -147,7 +183,7 @@
                      </tr>
                   </thead>
                   <tbody id="studens-table-body" class="tbody">
-                     <tr class="trow">
+                     <!-- <tr class="trow">
                         <td>1</td>
                         <td>Alimov Abror Xabibullayevich</td>
                         <td>Bakalavr</td>
@@ -155,9 +191,33 @@
                         <td>14 000 000 UZS</td>
                         <td>30 000 000 UZS</td>
                         <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr>
+                     </tr> -->
                   </tbody>
                </table>
+            </div>
+            <div class="pagination">
+               <div class="pagination__info-student">
+                  <!-- 59 tadan  1-10 ko‘rsatilmoqda -->
+               </div>
+               <div class=" flex justify-between gap-5">
+                  <form class="flex gap-5">
+                     <label for="pagination-count">Ko‘rsatish</label>
+                     <select class="select" name="pagination-count" id="pagination-count">
+                        <option  class="paginationed-data-option" value="10">10</option>
+                        <option class="paginationed-data-option" value="20">20</option>
+                        <option class="paginationed-data-option" value="30">30</option>
+                     </select>
+                  </form>
+                  <div class="pagination-container">
+                     <!-- <button disabled></button>
+                     <button class="current-page btn">1</button>
+                     <button >2</button>
+                     <button>...</button>
+                     <button>9</button>
+                     <button>10</button>
+                     <button></button> -->
+                  </div>
+               </div>
             </div>
          </section>
       </div>
@@ -437,7 +497,7 @@
          <div class="form-group">
           <label for="university" class="label">OTM</label>
           <select class="select" name="university" id="university">
-            <option value="">OTM ni tanlang</option>
+            <option value="">OTMni tanlang</option>
             <option value="">Toshkent shahridagi INHA Universiteti</option>
             <option value="">O’zbekiston milliy universiteti</option>
             <option value="">Toshkent davlat texnika universiteti</option>
@@ -492,7 +552,7 @@
            <div class="form-group">
              <label for="university" class="label">OTM</label>
              <select class="select" name="university" id="university">
-               <option value="">OTM ni tanlang</option>
+               <option value="">OTMni tanlang</option>
                <option value="">Toshkent shahridagi INHA Universiteti</option>
                <option value="">O’zbekiston milliy universiteti</option>
                <option value="">Toshkent davlat texnika universiteti</option>
