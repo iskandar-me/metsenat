@@ -46,10 +46,10 @@
                <button class="tablink" onclick="openTab(event,'dashboard')">
                   Dashboard
                </button>
-               <button class="tablink" onclick="openTab(event,'sponsors')"  id="defaultOpen">
+               <button class="tablink" onclick="openTab(event,'sponsors')" >
                   Homiylar
                </button>
-               <button class="tablink" onclick="openTab(event,'students')"  >
+               <button class="tablink" onclick="openTab(event,'students')"  id="defaultOpen" >
                   Talabalar
                </button>
             </div>
@@ -91,10 +91,11 @@
           </div>
          </section>
          <section id="sponsors" class="tab-content">
-            <div class="actions-with-students">
+            <div class="actions-with-sponsors">
                <form class="search-form">
-                  <input class="input search-input" type="text" placeholder="Search..." />
-                  <img src="../../assets/img/search.svg" alt="" />
+                  <input class="input search-input search-sponsor" type="text" placeholder="Search..." />
+                  <img class="search-icon" src="../../assets/img/search.svg" alt="" />
+                  <img class="sponsor-clear-icon" src="../../assets/img/crud/close.-icon.svg" alt="">
                </form>
                <div class="filter-wrapper open-sponsor-filter ">
                 <img src="../../assets/img/filter.svg" alt="">
@@ -160,8 +161,9 @@
          <section id="students" class="tab-content">
             <div class="actions-with-students">
                <form class="search-form">
-                  <input class="input search-input" type="text" placeholder="Search..." />
-                  <img src="../../assets/img/search.svg" alt="" />
+                  <input class="input search-input search-student" type="text" placeholder="Search..." />
+                  <img class="search-icon" src="../../assets/img/search.svg" alt="Search icon" />
+                  <img class="student-clear-icon" src="../../assets/img/crud/close.-icon.svg" alt="">
                </form>
                <div class="filter-wrapper open-student-filter">
                 <img src="../../assets/img/filter.svg" alt="">
@@ -209,13 +211,15 @@
                      </select>
                   </form>
                   <div class="pagination-container">
-                     <!-- <button disabled></button>
+                     <!-- <button disabled>
+                        <img src="../../assets/img/arrow-icons/arrow-left.svg" alt="">
+                     </button>
                      <button class="current-page btn">1</button>
                      <button >2</button>
                      <button>...</button>
                      <button>9</button>
                      <button>10</button>
-                     <button></button> -->
+                     <button><img src="../../assets/img/arrow-icons/arrow.right.svg" alt=""></button> -->
                   </div>
                </div>
             </div>
@@ -328,10 +332,10 @@
                   class="to-back"
                   src="../../../../assets/img/arrow-icons/to-back.svg"
                   alt="" />
-               <h2 class="current-student-name">
-                  Ishmuhammedov Aziz Ishqobilovich
+               <h2 class="current-sponsor-name">
+
                </h2>
-               <span class="sponsor__status">Tasdiqlangan</span>
+               <span class="sponsor__status"></span>
             </span>
          </header>
          <main class="detail-main">
@@ -352,25 +356,25 @@
                         class="sponsor-logo"
                         src="../../../assets/img/sponsor-picture.svg"
                         alt="Picture of Sponsor" />
-                     <h3 class="student-name detail-text">
+                     <h3 class="sponsor-name detail-text">
                         Isfandiyorov Iqbol Bobomirzayevich
                      </h3>
                   </div>
 
-                  <div class="education-wrapper">
+                  <div class="sponsor-wrapper">
                      <div class="">
                         <label class="secondary-title">telefon raqam</label>
-                        <span class="student__tel-number detail-text"
+                        <span class="sponsor__tel-number detail-text"
                            >+998 99 973-72-60</span
                         >
                      </div>
                      <div class="">
                         <label class="secondary-title">Homiylik summasi</label>
-                        <span class="detail-text">30 000 000 UZS</span>
+                        <span class="sponsors-sponsorship-amount detail-text">30 000 000 UZS</span>
                      </div>
                      <div class="">
                         <label class="secondary-title">Tashkilot nomi</label>
-                        <span class="detail-text">Orient Group Corporation</span>
+                        <span class="sponsor-company detail-text">Orient Group Corporation</span>
                      </div>
 
                   </div>
@@ -534,13 +538,13 @@
            <div class="flex gap-7">
              <div class="form-group">
                <label for="student-full-name" class="label">F.I.Sh. (Familiya Ism Sharif)</label>
-               <input type="text" class="input" id="student-full-name">
+               <input type="text" class="input new-student__name" id="student-full-name">
              </div>
              <div class="form-group">
                <label for="student-number" class="label">Telefon raqam</label>
                <div class="form__phone-group">
                  <span>+998</span>
-                 <input  class="input input-phone input-number"
+                 <input  class="input input-phone input-number new-student__number"
                     type="text"
                     name="student-number"
                     id="student-number"
@@ -551,7 +555,7 @@
            </div>
            <div class="form-group">
              <label for="university" class="label">OTM</label>
-             <select class="select" name="university" id="university">
+             <select class="select new-student__university" name="university" id="university">
                <option value="">OTMni tanlang</option>
                <option value="">Toshkent shahridagi INHA Universiteti</option>
                <option value="">O’zbekiston milliy universiteti</option>
@@ -567,7 +571,7 @@
            <main class="flex gap-7">
              <div class="form-group">
                <label class="label" for="studentship-type">Talabalik turi</label>
-               <select class="select" name="studentship-type" id="studentship-type">
+               <select class="select new-student-education__degree" name="studentship-type" id="studentship-type">
                  <option value="">Barchasi</option>
                  <option value="">Bakalavr</option>
                  <option value="">Magistr</option>
@@ -575,7 +579,7 @@
              </div>
              <div class="form-group">
                <label class="label" for="tuition-fee">Kontrakt summa</label>
-               <input class="input input-number" type="text" name="tuition-fee" id="tuition-fee"  placeholder="300 000">
+               <input class="input input-number new-student__tuition-fee" type="text" name="tuition-fee" id="tuition-fee"  placeholder="300 000">
              </div>
            </main>
            <hr class="hr-line">
@@ -839,20 +843,23 @@
       <div class="overlay hidden"></div>
 
 
-      <script src="../../components/modals/sponsor/filter-sponsors/filter-sponsors.js"></script>
-      <script src="../../components/sponsor/sponsor-detail/sponsor-detail.js"></script>
-      <script src="../../components/modals/sponsor/edit-sponsors-info/edit-sponsors-info.js"></script>
 
-      <script src="../../components/students/student-detail/student-detail.js"></script>
-      <script src="../../components/modals/student/edit-student/edit-student.js"></script>
-      <script src="../../components/modals/student/filter-students/filter-student.js"></script>
-      <script src="../../components/modals/student/add-sponsor-to-student/add-sponsor-to-student.js"></script>
-      <script src="../../components/modals/student/edit-students-sponsor/edit-students-sponsor.js"></script>
-      <script src="../../components/students/add-students/add-students.js"></script>
+      <script  type="module" src="../../components/modals/sponsor/filter-sponsors/filter-sponsors.js"></script>
+      <script  type="module" src="../../components/sponsor/sponsor-detail/sponsor-detail.js"></script>
+      <script  type="module"  src="../../components/modals/sponsor/edit-sponsors-info/edit-sponsors-info.js"></script>
+
+      <script  type="module" src="../../components/students/student-detail/student-detail.js"></script>
+      <script  type="module" src="../../components/modals/student/edit-student/edit-student.js"></script>
+      <script  type="module" src="../../components/modals/student/filter-students/filter-student.js"></script>
+      <script  type="module" src="../../components/modals/student/add-sponsor-to-student/add-sponsor-to-student.js"></script>
+      <script  type="module" src="../../components/modals/student/edit-students-sponsor/edit-students-sponsor.js"></script>
+      <script  type="module" src="../../components/students/add-students/add-students.js"></script>
 
       <script src="../../components/form/form.js"></script>
       <!-- <script src="../../js/script.js"></script> -->
       <script type="module" src="./sponsors-table.js"></script>
+      <script type="module" src="./student-table.js"></script>
+      <script src="./search.js" type="module"></script>
       <script src="./admin-panel.js"></script>
 
    </body>

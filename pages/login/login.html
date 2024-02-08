@@ -12,6 +12,10 @@
       <link rel="stylesheet" href="../../components/button/button.css" />
       <link rel="stylesheet" href="../../assets/css/style.css" />
       <link rel="stylesheet" href="./login.css" />
+      <script
+         src="https://www.google.com/recaptcha/api.js"
+         async
+         defer></script>
    </head>
    <body>
       <div class="login-wrapper">
@@ -22,7 +26,7 @@
                   <span>Club</span>
                </a>
             </div>
-            <form class="form login-form">
+            <form class="form login-form" method="post" autocomplete="on">
                <h2 class="login__title">Kirish</h2>
                <div class="login__form-group">
                   <label class="login__label" for="username">lOGIN</label>
@@ -32,6 +36,7 @@
                      id="username"
                      name="username"
                      placeholder="adm8904" />
+                  <span class="error-username-message"></span>
                </div>
                <div class="login__form-group">
                   <label class="login__label" for="password">password</label>
@@ -41,37 +46,55 @@
                      id="password"
                      name="password"
                      placeholder="••••••••••" />
+                  <span class="error-password-message"></span>
                </div>
+               <p style="cursor: pointer" id="textToCopy">uF9aH1vZ3bV2kN2y</p>
+
                <div class="recaptcha-wrapper">
-                  <div class="recaptcha__checkbox-box">
-                     <input
-                        class="input recaptcha__checkbox"
-                        type="checkbox"
-                        id="recaptcha" />
-                     <label class="login__label" for="recaptcha"
-                        >I’m not a robot</label
-                     >
-                  </div>
-                  <div class="recaptcha__img-box">
-                     <img
-                        src="../../assets/img/auth/recaptcha.svg"
-                        alt="Recaptcha" />
-                     <span>reCAPTCHA</span>
-                     <a href="#">Privacy - Terms</a>
-                  </div>
+                  <div
+                     class="g-recaptcha"
+                     data-sitekey="6LftMGwpAAAAAFCOayA0sWIIZZWW2bn8_Wb1sShF"></div>
+                  <br />
+                  <input type="submit" value="Submit" />
                </div>
-               <a
-                  href="../admin-panel/admin-panel.html"
-                  class="btn btn-primary submit-btn"
-                  type="submit"
-                  >Kirish</a
-               >
             </form>
          </div>
       </div>
 
-      <!-- <script src="./js/theme-toggler.js"></script> -->
-      <!-- <script src="../../components/form/form.js"></script> -->
-      <script src="../../js/script.js"></script>
+      <!-- Recaptcha -->
+      <script>
+         console.log(window.location);
+      </script>
+      <script>
+         function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+         }
+      </script>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const textToCopy = document.getElementById("textToCopy");
+
+            // Add click event listener to the text
+            textToCopy.addEventListener("click", function () {
+               // Create a temporary textarea element to hold the text
+               const tempTextArea = document.createElement("textarea");
+               tempTextArea.value = textToCopy.textContent;
+
+               // Append the textarea to the document
+               document.body.appendChild(tempTextArea);
+
+               // Select the text inside the textarea
+               tempTextArea.select();
+
+               // Execute the copy command
+               document.execCommand("copy");
+
+               // Remove the temporary textarea
+               document.body.removeChild(tempTextArea);
+            });
+         });
+      </script>
+      <script src="./login.js"></script>
    </body>
 </html>
