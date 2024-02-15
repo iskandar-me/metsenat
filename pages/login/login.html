@@ -54,7 +54,9 @@
                   <div
                      class="g-recaptcha"
                      data-sitekey="6LftMGwpAAAAAFCOayA0sWIIZZWW2bn8_Wb1sShF"></div>
-                  <br />
+                  <span class="recaptcha__message"
+                     >Prove You are not a robot!</span
+                  >
                   <input type="submit" value="Submit" />
                </div>
             </form>
@@ -62,9 +64,6 @@
       </div>
 
       <!-- Recaptcha -->
-      <script>
-         console.log(window.location);
-      </script>
       <script>
          function onSubmit(token) {
             document.getElementById("demo-form").submit();

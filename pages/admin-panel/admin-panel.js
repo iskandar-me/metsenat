@@ -1,4 +1,15 @@
-"use strict";
+// "use strict";
+const overlay = document.querySelector(".overlay");
+const modals = document.querySelectorAll(".modal");
+const btns = document.querySelectorAll(".btn");
+const closeBtns = document.querySelectorAll(".close-btn");
+ function closeModal() {
+   modals.forEach((modal) => {
+      modal.classList.add("hidden");
+   });
+   overlay.classList.add("hidden");
+   document.body.style.overflow = "auto";
+}
 const tablinks = document.querySelectorAll(".tablink");
 function openTab(e, tabname) {
    const tabcontents = document.querySelectorAll(".tab-content");
@@ -21,10 +32,6 @@ document.getElementById("defaultOpen").click();
 
 document.addEventListener("DOMContentLoaded", () => {
    const filterSponsorsForm = document.querySelector(".filter-sponsors-modal");
-   const overlay = document.querySelector(".overlay");
-   const modals = document.querySelectorAll(".modal");
-   const btns = document.querySelectorAll(".btn");
-   const closeBtns = document.querySelectorAll(".close-btn");
 
    // const dashboardBtn = document.querySelector(".tablink.dashboard");
    // const sponsorsBtn = document.querySelector(".tablink.sponsors");
@@ -52,18 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", closeModal);
    });
 
-   function closeModal() {
-      modals.forEach((modal) => {
-         modal.classList.add("hidden");
-      });
-      overlay.classList.add("hidden");
-      document.body.style.overflow = "auto";
-   }
-
    document.querySelectorAll(".save-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
          e.preventDefault();
-         closeModal();
+         // closeModal();
       });
    });
 });

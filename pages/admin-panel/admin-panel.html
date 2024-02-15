@@ -28,7 +28,7 @@
          </a>
          <div class="admin__info">
             <div class="admin__profile">
-               <span class="admin__name">Shohrux</span>
+               <span class="admin__name">Iskandar</span>
                <span class="admin__logo">
                   <img
                      src="../../assets/img/admin-profile-logo.svg"
@@ -46,7 +46,7 @@
                <button class="tablink" onclick="openTab(event,'dashboard')">
                   Dashboard
                </button>
-               <button class="tablink" onclick="openTab(event,'sponsors')" >
+               <button class="tablink" onclick="openTab(event,'sponsors')"  >
                   Homiylar
                </button>
                <button class="tablink" onclick="openTab(event,'students')"  id="defaultOpen" >
@@ -491,8 +491,8 @@
             </button>
          </header>
          <div class="form-group">
-          <label class="label" for="education-type">Talabalik turi</label>
-          <select class="select" name="education-type" id="education-type">
+          <label class="label" for="education-degree">Talabalik turi</label>
+          <select class="select" name="education-degree" id="education-degree">
             <option value="">barchasi</option>
             <option value="">bakalavr</option>
             <option value="">magistr</option>
@@ -508,7 +508,7 @@
             <option value="">Toshkent davlat iqtisodiyot universiteti</option>
             <option value="">O’zbekiston davlat jahon tillari universiteti</option>
             <option value="">Toshkent davlat sharqshunoslik instituti</option>
-            <option value="">Toshkent to’qimachilik va нngil sanoat istituti</option>
+            <option value="">Toshkent to’qimachilik va Yengil sanoat instituti</option>
             <option value="">Toshkent arxitektura-qurilish instituti</option>
             <option value="">Toshkent moliya instituti</option>
           </select>
@@ -520,7 +520,7 @@
                   alt="Clear icon" />
                Tozalash
             </button>
-            <button class="btn btn-primary save-btn">
+            <button role="submit" class="btn btn-primary save-btn show-filtered-students">
                <img
                   src="../../../../assets/img/white-eye.svg"
                   alt="See the result" />
@@ -858,6 +858,7 @@
       <script src="../../components/form/form.js"></script>
       <!-- <script src="../../js/script.js"></script> -->
       <script type="module" src="./sponsors-table.js"></script>
+      <script src="./pagination.js"></script>
       <script type="module" src="./student-table.js"></script>
       <script src="./search.js" type="module"></script>
       <script src="./admin-panel.js"></script>

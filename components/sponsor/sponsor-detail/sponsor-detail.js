@@ -15,11 +15,11 @@ document.querySelectorAll(".eye-icon").forEach((icon) => {
 function openSponsorDetail(sponsorId) {
    document.querySelector(".sponsor-detail-wrapper").classList.remove("hidden");
    document.querySelector(".container").style.display = "none";
-   console.log(sponsorsData, "fdghj,");
+   // console.log(sponsorsData, "fdghj,");
    const sponsor = sponsorsData.find((sponsor) => {
       return sponsor.id === sponsorId;
    });
-   console.log(sponsor);
+   // console.log(sponsor);
 
    document.querySelector(".current-sponsor-name").textContent = sponsor?.name;
    document.querySelector(".sponsor__status").textContent = sponsor?.status;

@@ -77,11 +77,20 @@
    align-items: center;
    flex-shrink: 0;
 }
-
-.g-recaptcha {
-   margin-bottom: 20px;
+.recaptcha-wrapper {
+   position: relative;
 }
-
+.g-recaptcha {
+   margin-bottom: 40px;
+}
+.recaptcha__message {
+   color: red;
+   position: absolute;
+   left: 10px;
+   bottom: 0px;
+   transform: translateY(-50px);
+   display: none;
+}
 input[type="submit"] {
    width: 100%;
    background-color: #36f;
@@ -110,14 +119,7 @@ input[type="submit"]:hover {
    border-color: red;
    position: relative;
 }
-.error::before {
-   position: absolute;
-   content: "please, enter valid value";
-   top: 0;
-   left: 0;
-   color: black;
-   z-index: 500;
-}
+
 .success {
    border-color: green;
 }
