@@ -1,11 +1,17 @@
 "use strict";
+
+// import { newStudent } from "../../components/students/add-students/add-students";
+
 // selecting required element
-const paginationContainers = document.querySelectorAll(".pagination-container")[0];
+const paginationContainers = document.querySelectorAll(
+   ".pagination-container"
+)[0];
 let totalPages = 20;
 let currentPage = 1;
-
+let rowPerPage = 5;
 //calling function with passing parameters and adding inside element which is ul tag
 paginationContainers.innerHTML = createPagination(totalPages, currentPage);
+
 function createPagination(totalPages, currentPage) {
    let liTag = "";
    let active;
@@ -76,4 +82,27 @@ function createPagination(totalPages, currentPage) {
    }
    element.innerHTML = liTag; //add li tag inside ul tag
    return liTag; //reurn the li tag
+}
+
+const studentsTable = document.getElementById("studens-table-body");
+
+function showStudentsTable() {
+   studentsTable.innerText = "";
+   newStudent.forEach((student, i) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+      <td>${i + 1 + (currentPage - 1) * rowsPerPage}</td>
+      <td>${student.name}</td>
+      <td>${student.education_degree}</td>
+      <td>${student.university}</td>
+      <td>${student.allocated_money}</td>
+      <td>${student.tuition_fee}</td>
+      <td>
+      <img onclick="openStudentDetail(${
+         student.id
+      })" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
+      </td>
+      `;
+      studentsTable.append(tr);
+   });
 }

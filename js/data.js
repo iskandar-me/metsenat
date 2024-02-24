@@ -230,6 +230,7 @@ export let sponsorsData = [
    ],
    studentsData = [
       {
+         id: 1,
          name: "Alimov Abror Xabibullayevich",
          education_degree: "Bakalavr",
          university: "Toshkent shahridagi INHA Universiteti",
@@ -237,6 +238,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 2,
          name: "Ibragimov Sohib Mirfayozovich",
          education_degree: "Bakalavr",
          university: "Toshkent shahridagi INHA Universiteti",
@@ -244,6 +246,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 3,
          name: "Isfandiyorov  Iqbol Bobomirzayevich",
          education_degree: "Bakalavr",
          university: "Toshkent shahridagi INHA Universiteti",
@@ -251,6 +254,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 4,
          name: "Rustamov Oybek  Tajiddinovich",
          education_degree: "Bakalavr",
          university: "Toshkent shahridagi INHA Universiteti",
@@ -258,6 +262,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 5,
          name: "Ortiqov Abror Bahodirovich",
          education_degree: "Bakalavr",
          university: "Toshkent shahridagi INHA Universiteti",
@@ -265,6 +270,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 6,
          name: "Qosimov Furqat Xabibullayevich",
          education_degree: "Bakalavr",
          university: "O’zbekiston milliy universiteti",
@@ -272,6 +278,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 7,
          name: "Ishmuhammedov Aziz Ishqobilovich",
          education_degree: "Bakalavr",
          university: "Toshkent davlat texnika universiteti",
@@ -279,6 +286,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 8,
          name: "Nazarov Sanjar Olimovich",
          education_degree: "Bakalavr",
          university: "Toshkent davlat iqtisodiyot universiteti",
@@ -286,6 +294,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 9,
          name: "Alimov Abror Xabibullayevich",
          education_degree: "Bakalavr",
          university: "Toshkent davlat sharqshunoslik instituti",
@@ -293,6 +302,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 10,
          name: "Alimov Abror Xabibullayevich",
          education_degree: "Bakalavr",
          university: "Toshkent davlat iqtisodiyot universiteti",
@@ -300,6 +310,7 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 11,
          name: "Alimov Abror Xabibullayevich",
          education_degree: "Bakalavr",
          university: "Toshkent davlat sharqshunoslik instituti",
@@ -307,23 +318,33 @@ export let sponsorsData = [
          allocated_money: 15000000,
       },
       {
+         id: 12,
          name: "Alimov Abror Xabibullayevich",
-         education_degree: "Bakalavr",
+         education_degree: "Magistr",
          university: "Toshkent davlat iqtisodiyot universiteti",
          tuition_fee: 30000000,
          allocated_money: 15000000,
       },
       {
+         id: 13,
          name: "Alimov Abror Xabibullayevich",
          education_degree: "Bakalavr",
          university: "Toshkent davlat sharqshunoslik instituti",
          tuition_fee: 30000000,
          allocated_money: 15000000,
+      },
+      {
+         id: 14,
+         name: "Salimov Husniddin Abror o`g`li",
+         education_degree: "Bakalavr",
+         university: "Toshkent davlat agrar instituti",
+         tuition_fee: 9000000,
+         allocated_money: 4000000,
       },
    ];
 
 localStorage.setItem("sponsors", JSON.stringify(sponsorsData));
-localStorage.setItem("students", JSON.stringify(studentsData));
+// localStorage.setItem("students", JSON.stringify(studentsData));
 // const UZSom = new Intl.NumberFormat("en-UZ", {
 //    style: "currency",
 //    currency: "UZS",

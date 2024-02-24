@@ -1,5 +1,6 @@
 "use strict";
 import { sponsorsData } from "../../js/data.js";
+import { openSponsorDetail } from "../../components/sponsor/sponsor-detail/sponsor-detail.js";
 const sponsorsTable = document.getElementById("sponsors-table-body");
 
 const paginationContainers = document.querySelectorAll(".pagination-container");
@@ -26,7 +27,7 @@ export function showSponsorsTable(currentPage) {
       <td>
       <img onclick="openSponsorDetail(${
          sponsor.id
-      })" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
+})" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
       </td>
       `;
       sponsorsTable.append(tr);
@@ -168,7 +169,6 @@ function updatePaginationBtns(totalPages, currentPage) {
          i === currentPage ? "pagination-btn  active" : "pagination-btn";
       btn.addEventListener("click", () => {
          currentPage = i;
-         console.log(currentPage);
          updatePaginationBtns(totalSponsorPages, currentPage);
          showSponsorsTable(currentPage);
       });

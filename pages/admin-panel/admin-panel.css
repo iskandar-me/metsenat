@@ -191,6 +191,7 @@
 .payment__amount {
    display: flex;
    padding: 24px 48px 24px 24px;
+   gap: 16px;
    align-items: center;
    flex-shrink: 0;
    border-radius: 8px;
@@ -230,8 +231,24 @@
 .canvas-wrapper {
    display: flex;
    align-items: start;
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+}
+.chart-inner {
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   min-height: 402px;
+   cursor: pointer;
+   width: 100%;
 }
 
+.chart-title {
+   font-size: 24px;
+   line-height: 28px;
+   font-weight: bold;
+}
 #sponsors {
    overflow-x: auto;
 }
@@ -268,7 +285,21 @@
    font-style: normal;
    line-height: 22px;
 }
-
+.table .tbody td > span {
+   font-size: 15px;
+   font-weight: 400;
+   font-style: normal;
+   line-height: 22px;
+}
+.table .tbody .student__name {
+   color: #2e384d;
+   font-feature-settings: "clig" off, "liga" off;
+   font-family: "SF Pro Display", "Arial", sans-serif;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 20px;
+   text-transform: capitalize;
+}
 .trow td:nth-child(2),
 .trow td:nth-child(5),
 .trow td:nth-child(5) {
@@ -279,7 +310,7 @@
    cursor: pointer;
    padding: 4px;
    border-radius: 4px;
-      transition: all 0.3s ease;
+   transition: all 0.3s ease;
 }
 .eye-icon:hover {
    background-color: rgba(51, 102, 255, 0.3);
@@ -287,9 +318,7 @@
 .eye-icon:active {
    transform: scale(0.95);
 }
-.trow .sponsor-status {
-   color: #03ba71;
-}
+
 /* STUDENTS */
 #students {
    display: none;
