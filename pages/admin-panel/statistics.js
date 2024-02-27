@@ -48,7 +48,7 @@ var lineChart = new Chart(ctx, {
             {
                ticks: {
                   beginAtZero: true,
-                  stepSize: 10000,
+                  stepSize: 100,
                },
             },
          ],

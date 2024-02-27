@@ -1,6 +1,6 @@
 "use strict";
 
-import { newStudent } from "../../../students/add-students/add-students.js";
+import { studentsData } from "../../../students/add-students/add-students.js";
 
 const openStudentFilter = document.querySelector(".open-student-filter");
 openStudentFilter.addEventListener("click", () => {
@@ -28,7 +28,7 @@ const selectedUniversity = universitySelect.value;
 const selectedEducationDegree = educationDegreeSelect.value;
 function filterStudents() {
    // Filter the studentsData array based on selected values
-   const filteredStudents = newStudent.filter((student) => {
+   const filteredStudents = studentsData.filter((student) => {
       if (selectedEducationDegree && selectedUniversity) {
          console.log(student);
          return (

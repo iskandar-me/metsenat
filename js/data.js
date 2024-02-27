@@ -228,7 +228,7 @@ export let sponsorsData = [
          status: "Bekor qilingan",
       },
    ],
-   studentsData = [
+   studentsInitialData = [
       {
          id: 1,
          name: "Alimov Abror Xabibullayevich",
@@ -344,7 +344,6 @@ export let sponsorsData = [
    ];
 
 localStorage.setItem("sponsors", JSON.stringify(sponsorsData));
-// localStorage.setItem("students", JSON.stringify(studentsData));
 // const UZSom = new Intl.NumberFormat("en-UZ", {
 //    style: "currency",
 //    currency: "UZS",

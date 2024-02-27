@@ -1,6 +1,7 @@
 "use strict";
 
-import { sponsorsData, studentsData } from "../../js/data.js";
+import { sponsorsData } from "../../js/data.js";
+import { studentsData } from "../../components/students/add-students/add-students.js";
 
 // console.log(debounce);
 // const searchInputs = document.querySelectorAll(".search-input")
@@ -40,8 +41,8 @@ searchSponsorInput.addEventListener("input", () => {
       clearSponsorInputIcon.style.display = "none";
    }
 
-   handleSearchSponsorInput();
-   // debounce(handleSearchSponsorInput, 100);
+   // handleSearchSponsorInput();
+   debounce(handleSearchSponsorInput(), 500);
 });
 
 function handleSearchSponsorInput() {
@@ -105,7 +106,8 @@ searchStudentInput.addEventListener("input", () => {
       clearStudentInputIcon.style.display = "none";
    }
 
-   handleSearchStudentInput();
+   // handleSearchStudentInput();
+   debounce(handleSearchStudentInput(), 500);
 });
 
 function handleSearchStudentInput() {
@@ -113,7 +115,7 @@ function handleSearchStudentInput() {
       .trim()
       .toLowerCase();
    const matchedStudents = getMatchingStudentValue(searchStudentInputValue);
-   
+
    if (matchedStudents.length) {
       displaySearchingStudentResults(matchedStudents);
    } else {

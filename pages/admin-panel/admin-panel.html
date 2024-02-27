@@ -20,6 +20,7 @@
 
       <link rel="stylesheet" href="./admin-panel.css" />
       <link rel="stylesheet" href="../../assets/css/style.css" />
+
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    </head>
    <body class="admin-body">
@@ -144,7 +145,8 @@
                <div class=" flex justify-between gap-5">
                   <form class="flex gap-5">
                      <label for="pagination-count">Ko‘rsatish</label>
-                     <select class="select" name="pagination-count" id="pagination-count">
+                     <select class="select sponsor__pagination-count" name="pagination-count" id="pagination-count">
+                        <option  class="paginationed-data-option" value="5">5</option>
                         <option  class="paginationed-data-option" value="10">10</option>
                         <option class="paginationed-data-option" value="20">20</option>
                         <option class="paginationed-data-option" value="30">30</option>
@@ -189,15 +191,7 @@
                      </tr>
                   </thead>
                   <tbody id="studens-table-body" class="tbody">
-                     <!-- <tr class="trow">
-                        <td>1</td>
-                        <td>Alimov Abror Xabibullayevich</td>
-                        <td>Bakalavr</td>
-                        <td>Toshkent shahridagi INHA Universiteti</td>
-                        <td>14 000 000 UZS</td>
-                        <td>30 000 000 UZS</td>
-                        <td ><img onclick="openStudentDetail()" class="eye-icon" src="../../assets/img/eye.svg" alt=""></td>
-                     </tr> -->
+
                   </tbody>
                </table>
             </div>
@@ -208,13 +202,14 @@
                <div class=" flex justify-between gap-5">
                   <form class="flex gap-5">
                      <label for="pagination-count">Ko‘rsatish</label>
-                     <select class="select" name="pagination-count" id="pagination-count">
+                     <select class="select student__pagination-count" name="pagination-count" id="pagination-count">
+                        <option  class="paginationed-data-option" value="5">5</option>
                         <option  class="paginationed-data-option" value="10">10</option>
                         <option class="paginationed-data-option" value="20">20</option>
                         <option class="paginationed-data-option" value="30">30</option>
                      </select>
                   </form>
-                  <div class="pagination-container">
+                  <div class="students__pagination-container">
                      <!-- <button disabled>
                         <img src="../../assets/img/arrow-icons/arrow-left.svg" alt="">
                      </button>

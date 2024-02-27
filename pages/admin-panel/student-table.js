@@ -1,199 +1,219 @@
 "use strict";
-// import { studentsData } from "../../js/data.js";
-import { newStudent } from "../../components/students/add-students/add-students.js";
+import { studentsData } from "../../components/students/add-students/add-students.js";
+
 const studentsTable = document.getElementById("studens-table-body");
-const paginationContainers = document.querySelectorAll(
-   ".pagination-container"
-)[1];
-const localData = JSON.parse(localStorage.getItem("students"));
-// console.log("local data is ", localData);
-// if (localData) {
-//    newStudent = localData;
-// }
-let currentPage = 2;
-let rowsPerPage = 10;
-let totalPages = Math.ceil(newStudent.length / rowsPerPage); // Calculate total pages
-if (newStudent.length) {
-   showStudentsTable();
+const studentPagionationInfo = document.querySelector(
+   ".pagination__info-student"
+);
+const studentPaginationCount = document.querySelector(
+   ".student__pagination-count"
+);
+const studentsPaginationContainer = document.querySelector(
+   ".students__pagination-container"
+);
+let currentPage = 1;
+let rowsPerPage, totalPages;
+
+// let startIndex = (currentPage - 1) * rowsPerPage;
+// let endIndex = startIndex + rowsPerPage;
+// console.log(startIndex, endIndex,);
+// let totalPages = Math.ceil(studentsData / rowsPerPage);
+if (studentsData.length) {
+   showStudentsTable(currentPage);
 } else {
    studentsTable.innerHTML = `<tr>
-      <td colspan="7" class="no-data">No data</td>
-      </tr>`;
+   <td colspan="7" class="no-data">No data</td>
+   </tr>`;
 }
 
-var e = document.getElementById("pagination-count");
-var value = e.value;
-var text = e.options[e.selectedIndex].text;
-// const totalStudentPages = Math.ceil(newStudent.length / rowPerPage);
+studentPaginationCount.addEventListener("change", () => {
+   var selectedValue = parseInt(studentPaginationCount.value);
+   let rowsPerPage = selectedValue;
+   currentPage = 1;
+   const startIndex = (currentPage - 1) * rowsPerPage;
+   const endIndex = startIndex + rowsPerPage;
+   totalPages = Math.ceil(studentsData.length / rowsPerPage); // Calculate total pages
 
-function paginateArray(array, rowPerPage, currentPage) {
-   const startIndex = (currentPage - 1) * rowPerPage;
-   const endIndex = startIndex + rowPerPage;
+   console.log(totalPages, "total pages");
+   console.log(rowsPerPage, "rows per page");
+   console.log(studentsData.length, "students");
+   showStudentsTable(currentPage);
+   generatePagination(currentPage);
+   // location.reload();
+   studentPagionationInfo.textContent =
+      currentPage === totalPages
+         ? `${studentsData.length}dan ${
+              startIndex + 1
+           }-${totalPages} ko‘rsatilmoqda`
+         : `${studentsData.length}dan ${
+              startIndex + 1
+           }-${endIndex} ko‘rsatilmoqda`;
+});
+
+function paginateArray(array, rowsPerPage, currentPage, totalPages) {
+   // studentPaginationCount.addEventListener("change", () => {
+   //    var selectedValue = parseInt(studentPaginationCount.value);
+   //    // Remove 'let' keyword to modify the outer 'rowsPerPage' variable
+   //    rowsPerPage = selectedValue;
+   //    currentPage = 1;
+   //    const startIndex = (currentPage - 1) * rowsPerPage;
+   //    const endIndex = startIndex + rowsPerPage;
+   //    const paginatedData = array.slice(startIndex, endIndex);
+
+   //    studentPagionationInfo.textContent =
+   //       currentPage === totalPages
+   //          ? `${studentsData.length}dan ${
+   //               startIndex + 1
+   //            }-${totalPages} ko‘rsatilmoqda`
+   //          : `${studentsData.length}dan ${
+   //               startIndex + 1
+   //            }-${endIndex} ko‘rsatilmoqda`;
+   // });
+
+   const startIndex = (currentPage - 1) * rowsPerPage;
+   const endIndex = startIndex + rowsPerPage;
    const paginatedData = array.slice(startIndex, endIndex);
 
-   const paginationInfoStudent = document.querySelector(
-      ".pagination__info-student"
-   );
-   paginationInfoStudent.textContent = `${newStudent.length}dan ${
-      startIndex + 1
-   }-${endIndex}ko'rsatilmoqda`;
+   studentPagionationInfo.textContent =
+      currentPage === totalPages
+         ? `${studentsData.length}dan ${startIndex + 1}-${
+              studentsData.length
+           } ko‘rsatilmoqda`
+         : `${studentsData.length}dan ${
+              startIndex + 1
+           }-${endIndex} ko‘rsatilmoqda`;
 
+   console.log(
+      paginatedData,
+      "paginated data",
+      startIndex + 1,
+      "dan",
+      endIndex,
+      "gacha in Paginated Data"
+   );
    return paginatedData;
 }
 
-// function updatePaginationBtns(totalPages, currentPage) {
-//    paginationContainers.innerHTML = "";
-//    for (let i = 1; i <= totalStudentPages; i++) {
-//       const btn = document.createElement("button");
-//       btn.innerText = i;
-//       btn.className =
-//          i === currentPage ? "pagination-btn  active" : "pagination-btn";
-//       btn.addEventListener("click", () => {
-//          currentPage = i;
-//          console.log(currentPage);
-//          updatePaginationBtns(totalStudentPages, currentPage);
-//          showStudentsTable(currentPage);
-//       });
-//       paginationContainers.append(btn);
-//       // paginationContainers[1].append(btn); //
-//    }
-// }
-// function updatePaginationBtns(totalStudentPages, currentPage) {}
-// updatePaginationBtns(totalSponsorPages, currentPage);
-// updatePaginationBtns(totalStudentPages, currentPage);
-//
+function generatePagination(currentPage) {
+   let paginationHtml = "";
+   paginationHtml += `<button id="prev" type="button" class="arrow-icon">
+   <img src="../../assets/img/arrow-icons/arrow-left.svg" alt='Left arrow icon' width="24" height='24'>
 
-// const paginationContainer = document.querySelector(".pagination-container");
-// const studentsTable = document.getElementById("studens-table-body");
+   </button>`;
 
-// newStudent = [];
-// let currentPage = 1;
-function changePage(page, totalPages) {
-   console.log("Changing page to:", page); // Debugging statement
-   if (page < 1 || page > totalPages) {
-      return;
-   }
-
-   // console.log("Current page:", currentPage); // Debugging statement
-
-   currentPage = page; // Update currentPage with the new page number
-   createPagination(totalPages, currentPage);
-   showStudentsTable();
-}
-
-// changePage(2);
-// Initial setup
-createPagination(totalPages, currentPage);
-showStudentsTable();
-function createPagination(totalPages, currentPage) {
-   console.log("Creating pagination"); //
-   let liTag = "";
-   let active;
-   let beforePage = currentPage - 1;
-   let afterPage = currentPage + 1;
-
-   if (currentPage > 1) {
-      liTag += `<li class="pagination-btn prev" onclick="changePage(${
-         currentPage - 1
-      },${totalPages})">Prev</li>`;
-   }
-
-   if (currentPage > 2) {
-      //if currentPage value is less than 2 then add 1 after the previous button
-      liTag += `<li class="first pagination-btn numb" onclick="changePage(1,${totalPages})"><span>1</span></li>`;
-      if (currentPage > 3) {
-         //if currentPage value is greater than 3 then add this (...) after the first li or currentPage
-         liTag += `<li class="dots pagination-btn"><span>...</span></li>`;
+   for (let i = 1; i <= totalPages; i++) {
+      if (
+         i === 1 ||
+         i === totalPages ||
+         (i >= currentPage - 1 && i <= currentPage + 1)
+      ) {
+         paginationHtml += `<button class="pagination-btn ${
+            i === currentPage ? "active" : ""
+         }" data-page="${i}">${i}</button>`;
+      } else if (i === currentPage - 2 || i === currentPage + 2) {
+         paginationHtml += `<button class="pagination-btn dots">...</button>`;
       }
    }
 
-   // how many pages or li show before the current li
-   if (currentPage == totalPages) {
-      beforePage = beforePage - 2;
-   } else if (currentPage == totalPages - 1) {
-      beforePage = beforePage - 1;
-   }
-   // how many pages or li show after the current li
-   if (currentPage == 1) {
-      afterPage = afterPage + 2;
-   } else if (currentPage == 2) {
-      afterPage = afterPage + 1;
-   }
+   paginationHtml += `<button id="next" class="arrow-icon">
+   <img src="./../../assets/img/arrow-icons/arrow-right.svg" alt="Right arrow icon" width="24" height='24'>
 
-   for (var plength = beforePage; plength <= afterPage; plength++) {
-      if (plength > totalPages) {
-         //if plength is greater than totalPage length then continue
-         continue;
-      }
-      if (plength == 0) {
-         //if plength is 0 than add +1 in plength value
-         plength = plength + 1;
-      }
-      if (currentPage == plength) {
-         //if currentPage is equal to plength than assign active string in the active variable
-         active = "active";
-      } else {
-         //else leave empty to the active variable
-         active = "";
-      }
-      liTag += `<li class="numb pagination-btn ${active}" onclick="changePage(${plength},${totalPages})"><span>${plength}</span></li>`;
+   </button>`;
+
+   studentsPaginationContainer.innerHTML = paginationHtml;
+
+   if (currentPage === 1) {
+      document.getElementById("prev").style.pointerEvents = "none";
+   } else if (currentPage === totalPages) {
+      document.getElementById("next").style.pointerEvents = "none";
    }
 
-   if (currentPage < totalPages - 1) {
-      //if currentPage value is less than totalPage value by -1 then show the last li or currentPage
-      if (currentPage < totalPages - 2) {
-         //if currentPage value is less than totalPage value by -2 then add this (...) before the last li or currentPage
-         liTag += `<li class="dots pagination-btn"><span>...</span></li>`;
-      }
-      liTag += `<li class="last numb pagination-btn" onclick="changePage(${totalPages},${totalPages})"><span>${totalPages}</span></li>`;
-   }
+   // Add event listener for "Prev" button
+   document.getElementById("prev").addEventListener("click", function (event) {
+      event.preventDefault();
+      handlePaginationClick("prev", currentPage);
+      scrollToTop();
+   });
 
-   if (currentPage < totalPages) {
-      liTag += `<li class="btn next pagination-btn" onclick="changePage(${
-         currentPage + 1
-      },${totalPages})"><span>Next</span></li>`;
-   }
+   // Add event listeners for numbered pages
+   const paginationBtns = document.querySelectorAll(".pagination-btn");
+   paginationBtns.forEach((btn) => {
+      btn.addEventListener("click", function (event) {
+         event.preventDefault();
+         const btnNumber = parseInt(event.target.getAttribute("data-page"));
+         handlePaginationClick(btnNumber, currentPage);
+         scrollToTop();
+      });
+   });
 
-   paginationContainers.innerHTML = liTag;
-   // return liTag; //reurn the li tag
-}
-
-export function showStudentsTable() {
-   console.log("Showing students table"); //
-   studentsTable.innerHTML = ""; // Clear the table body
-   const startIndex = (currentPage - 1) * rowsPerPage;
-   const endIndex = Math.min(startIndex + rowsPerPage);
-   const paginatedData = paginateArray(newStudent, rowsPerPage, currentPage);
-
-   console.log(paginatedData, "dtable");
-   const paginationInfoStudent = document.querySelector(
-      ".pagination__info-student"
-   );
-   paginationInfoStudent.textContent =
-      currentPage === totalPages
-         ? `${newStudent.length}dan ${startIndex + 1}-${
-              newStudent.length
-           }ko'rsatilmoqda`
-         : `${newStudent.length}dan ${
-              startIndex + 1
-           }-${endIndex}ko'rsatilmoqda`;
-
-   paginatedData.forEach((student, i) => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-             <td>${i + 1 + (totalPages - 1) * rowsPerPage}</td>
-             <td class='student__name'>${student.name}</td>
-             <td>${student.education_degree}</td>
-             <td>${student.university}</td>
-             <td>${student.allocated_money} <span>UZS</span></td>
-             <td>${student.tuition_fee} <span>UZS</span></td>
-             <td>
-                 <img onclick="openStudentDetail(${
-                    student.id
-                 })" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
-             </td>
-             `;
-      studentsTable.appendChild(tr);
+   // Add event listener for "Next" button
+   document.getElementById("next").addEventListener("click", function (event) {
+      event.preventDefault();
+      handlePaginationClick("next", currentPage);
+      scrollToTop();
    });
 }
-// console.log(currentPage, rowsPerPage, totalPages);
+
+function handlePaginationClick(targetPage, currentPage) {
+   console.log("Clicked:", targetPage); // Debugging statement
+   console.log("old Page:", currentPage); // Debugging statement
+
+   if (targetPage === "prev") {
+      currentPage = currentPage > 1 ? currentPage - 1 : 1;
+      console.log("prev is clicked");
+   } else if (targetPage === "next") {
+      currentPage = currentPage < totalPages ? currentPage + 1 : totalPages;
+      console.log("next is clicked");
+   } else {
+      currentPage = targetPage; // If it's a number button, set currentPage directly
+      console.log("number button is clicked");
+   }
+   console.log("New Page:", currentPage); // Debugging statement
+
+   generatePagination(currentPage);
+   showStudentsTable(currentPage);
+}
+
+function showStudentsTable(currentPage) {
+   studentsTable.innerHTML = "";
+
+   // Initialize 'rowsPerPage' and 'totalPages' before using them
+   rowsPerPage = parseInt(studentPaginationCount.value); // Assuming this is where you get the value of rowsPerPage
+   totalPages = Math.ceil(studentsData.length / rowsPerPage); // Assuming you calculate totalPages based on the data length
+
+   const paginatedData = paginateArray(
+      studentsData,
+      rowsPerPage,
+      currentPage,
+      totalPages
+   );
+
+   paginatedData.forEach((student, index) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+                   <td>${index + 1 + (currentPage - 1) * rowsPerPage}</td>
+                   <td class='student__name'>${student.name}</td>
+                   <td>${student.education_degree}</td>
+                   <td>${student.university}</td>
+                   <td>${student.allocated_money} <span>UZS</span></td>
+                   <td>${student.tuition_fee} <span>UZS</span></td>
+                   <td>
+                       <img onclick="openStudentDetail(${
+                          student.id
+                       })" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
+                   </td>
+                   `;
+      studentsTable.appendChild(tr);
+   });
+   // console.log(studentsData, "students data in students table");
+}
+
+generatePagination(currentPage);
+
+// Function to scroll to the top of the page smoothly
+function scrollToTop() {
+   window.scrollTo({
+      top: 150,
+      behavior: "smooth",
+   });
+}

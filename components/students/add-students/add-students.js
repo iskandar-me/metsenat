@@ -1,17 +1,15 @@
 "use strict";
-// import { showSponsorsTable } from "../../../pages/admin-panel/sponsors-table.js";
-import { studentsData } from "../../../js/data.js";
-import { showStudentsTable } from "../../../pages/admin-panel/student-table.js";
+import { showSponsorsTable } from "../../../pages/admin-panel/sponsors-table.js";
+import { studentsInitialData } from "../../../js/data.js";
 // console.log(showStudentsTable);
-export let newStudent = studentsData;
-console.log(newStudent, "newstudent");
+export let studentsData = studentsInitialData;
 
-newStudent = JSON.parse(localStorage.getItem("students"))
+studentsData = JSON.parse(localStorage.getItem("students"))
    ? JSON.parse(localStorage.getItem("students"))
-   : studentsData;
+   : studentsInitialData;
 
-localStorage.setItem("students", JSON.stringify(newStudent));
-// console.log(newStudent);
+localStorage.setItem("students", JSON.stringify(studentsData));
+// console.log(studentsData);
 const OpenAddStudentBtn = document.querySelector(".open-add-student-btn");
 
 OpenAddStudentBtn.addEventListener("click", function () {
@@ -22,13 +20,16 @@ OpenAddStudentBtn.addEventListener("click", function () {
 let data;
 document.querySelector(".add-student-btn").addEventListener("click", () => {
    addNewStudent();
-   console.log("added");
+   // console.log("added");
+   // const startIndex = (currentPage - 1) * rowsPerPage;
+   // paginateArray();
+   // const endIndex = startIndex + rowsPerPage;
+   // location.reload();
 });
 
 function addNewStudent() {
    document.querySelector(".add-student-page").classList.add("hidden");
    document.querySelector(".container").style.display = "block";
-   // newStudent = JSON.parse(localStorage.getItem("students")) || [];
    data = {
       id: generateRandomId(8),
       name: document.querySelector(".new-student__name").value,
@@ -39,10 +40,10 @@ function addNewStudent() {
       tuition_fee: document.querySelector(".new-student__tuition-fee").value,
       allocated_money: "0",
    };
-   newStudent.push(data);
-   localStorage.setItem("students", JSON.stringify(newStudent));
-   showStudentsTable();
-   // console.log("added?  S");
+   studentsData.push(data);
+   localStorage.setItem("students", JSON.stringify(studentsData));
+   // showStudentsTable(currentPage);
+   console.log(studentsData.length, "new students added");
 }
 
 const generateRandomId = function (length) {
