@@ -2,8 +2,6 @@
 import { showSponsorsTable } from "../../../pages/admin-panel/sponsors-table.js";
 import { sponsorsData } from "../../../js/data.js";
 
-document.querySelector(".current-student-name").textContent = "okkkkk";
-
 document.querySelector(".sponsor-detail-wrapper").classList.add("hidden");
 document.querySelector(".container").style.display = "block";
 
@@ -21,13 +19,13 @@ export function openSponsorDetail(sponsorId) {
    });
    console.log(sponsor);
 
-   document.querySelector(".current-sponsor-name").textContent = sponsor?.name;
-   document.querySelector(".sponsor__status").textContent = sponsor?.status;
-   document.querySelector(".sponsor-name").textContent = sponsor?.name;
-   document.querySelector(".sponsor__tel-number").textContent =
-      sponsor?.phoneNumber;
-   document.querySelector(".sponsors-sponsorship-amount").textContent =
-      sponsor?.sponsorshipSum;
+   // document.querySelector(".current-sponsor-name").textContent = sponsor?.name;
+   // document.querySelector(".sponsor__status").textContent = sponsor?.status;
+   // document.querySelector(".sponsor-name").textContent = sponsor?.name;
+   // document.querySelector(".sponsor__tel-number").textContent =
+   //    sponsor?.phoneNumber;
+   // document.querySelector(".sponsors-sponsorship-amount").textContent =
+   //    sponsor?.sponsorshipSum;
    // document.querySelector('.sponsor-company').textContent=sponsor.
 }
 

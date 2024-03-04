@@ -42,7 +42,7 @@ searchSponsorInput.addEventListener("input", () => {
    }
 
    // handleSearchSponsorInput();
-   debounce(handleSearchSponsorInput(), 500);
+   debounce(handleSearchSponsorInput, 500)();
 });
 
 function handleSearchSponsorInput() {
@@ -107,7 +107,7 @@ searchStudentInput.addEventListener("input", () => {
    }
 
    // handleSearchStudentInput();
-   debounce(handleSearchStudentInput(), 500);
+   debounce(handleSearchStudentInput, 500)();
 });
 
 function handleSearchStudentInput() {

@@ -1,5 +1,6 @@
 "use strict";
 import { studentsData } from "../../components/students/add-students/add-students.js";
+// i { openStudentsDetail } from "../../components/students/student-detail/student-detail.js";
 
 const studentsTable = document.getElementById("studens-table-body");
 const studentPagionationInfo = document.querySelector(
@@ -14,10 +15,6 @@ const studentsPaginationContainer = document.querySelector(
 let currentPage = 1;
 let rowsPerPage, totalPages;
 
-// let startIndex = (currentPage - 1) * rowsPerPage;
-// let endIndex = startIndex + rowsPerPage;
-// console.log(startIndex, endIndex,);
-// let totalPages = Math.ceil(studentsData / rowsPerPage);
 if (studentsData.length) {
    showStudentsTable(currentPage);
 } else {
@@ -51,25 +48,6 @@ studentPaginationCount.addEventListener("change", () => {
 });
 
 function paginateArray(array, rowsPerPage, currentPage, totalPages) {
-   // studentPaginationCount.addEventListener("change", () => {
-   //    var selectedValue = parseInt(studentPaginationCount.value);
-   //    // Remove 'let' keyword to modify the outer 'rowsPerPage' variable
-   //    rowsPerPage = selectedValue;
-   //    currentPage = 1;
-   //    const startIndex = (currentPage - 1) * rowsPerPage;
-   //    const endIndex = startIndex + rowsPerPage;
-   //    const paginatedData = array.slice(startIndex, endIndex);
-
-   //    studentPagionationInfo.textContent =
-   //       currentPage === totalPages
-   //          ? `${studentsData.length}dan ${
-   //               startIndex + 1
-   //            }-${totalPages} ko‘rsatilmoqda`
-   //          : `${studentsData.length}dan ${
-   //               startIndex + 1
-   //            }-${endIndex} ko‘rsatilmoqda`;
-   // });
-
    const startIndex = (currentPage - 1) * rowsPerPage;
    const endIndex = startIndex + rowsPerPage;
    const paginatedData = array.slice(startIndex, endIndex);
@@ -155,31 +133,22 @@ function generatePagination(currentPage) {
 }
 
 function handlePaginationClick(targetPage, currentPage) {
-   console.log("Clicked:", targetPage); // Debugging statement
-   console.log("old Page:", currentPage); // Debugging statement
-
    if (targetPage === "prev") {
       currentPage = currentPage > 1 ? currentPage - 1 : 1;
-      console.log("prev is clicked");
    } else if (targetPage === "next") {
       currentPage = currentPage < totalPages ? currentPage + 1 : totalPages;
-      console.log("next is clicked");
    } else {
       currentPage = targetPage; // If it's a number button, set currentPage directly
-      console.log("number button is clicked");
    }
-   console.log("New Page:", currentPage); // Debugging statement
 
    generatePagination(currentPage);
    showStudentsTable(currentPage);
 }
 
-function showStudentsTable(currentPage) {
+export function showStudentsTable(currentPage) {
    studentsTable.innerHTML = "";
-
-   // Initialize 'rowsPerPage' and 'totalPages' before using them
-   rowsPerPage = parseInt(studentPaginationCount.value); // Assuming this is where you get the value of rowsPerPage
-   totalPages = Math.ceil(studentsData.length / rowsPerPage); // Assuming you calculate totalPages based on the data length
+   rowsPerPage = parseInt(studentPaginationCount.value);
+   totalPages = Math.ceil(studentsData.length / rowsPerPage);
 
    const paginatedData = paginateArray(
       studentsData,
@@ -198,14 +167,14 @@ function showStudentsTable(currentPage) {
                    <td>${student.allocated_money} <span>UZS</span></td>
                    <td>${student.tuition_fee} <span>UZS</span></td>
                    <td>
-                       <img onclick="openStudentDetail(${
+                       <img onclick="openStudentsDetail(${
                           student.id
                        })" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
                    </td>
                    `;
+      tr.classList.add("trow");
       studentsTable.appendChild(tr);
    });
-   // console.log(studentsData, "students data in students table");
 }
 
 generatePagination(currentPage);

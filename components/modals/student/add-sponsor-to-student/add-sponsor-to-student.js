@@ -5,6 +5,10 @@ addSponsorBtns.forEach((btn) => {
    btn.addEventListener("click", () => {
       document.querySelector(".add-sponsor-modal").classList.remove("hidden");
       document.querySelector(".overlay").classList.remove("hidden");
-      // document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+      });
    });
 });

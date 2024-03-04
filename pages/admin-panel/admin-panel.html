@@ -203,6 +203,7 @@
                   <form class="flex gap-5">
                      <label for="pagination-count">Ko‘rsatish</label>
                      <select class="select student__pagination-count" name="pagination-count" id="pagination-count">
+                        <option  class="paginationed-data-option" value="2">2</option>
                         <option  class="paginationed-data-option" value="5">5</option>
                         <option  class="paginationed-data-option" value="10">10</option>
                         <option class="paginationed-data-option" value="20">20</option>
@@ -597,8 +598,8 @@
                   class="to-back"
                   src="../../../../assets/img/arrow-icons/to-back.svg"
                   alt="" />
-               <h2 class="current-student-name">
-                  Isfandiyorov Iqbol Bobomirzayevich
+               <h2 class="current-student__name">
+                  Isfandiyorov Iqbol Bobomirzayevich Test
                </h2>
             </span>
             <button class="btn btn-ordinary add-sponsor-btn">+ Homiy qo‘shish</button>
@@ -621,14 +622,15 @@
                         class="student-logo"
                         src="../../../assets/img/student-logo.svg"
                         alt="" />
-                     <h3 class="student-name detail-text">
-                        Isfandiyorov Iqbol Bobomirzayevich
+                     <h3 class="student__name detail-text">
+                        <!-- Isfandiyorov Iqbol Bobomirzayevich -->
+                        Test
                      </h3>
                   </div>
                   <div class="">
                      <label class="secondary-title">telefon raqam</label>
-                     <span class="student__tel-number detail-text"
-                        >+998 99 973-72-60</span
+                     <a href="" class="student__tel-number detail-text"
+                        >+998 99 973-72-60 Test</a
                      >
                   </div>
                   <div class="s-detail__subtitle">
@@ -637,23 +639,23 @@
                   <div class="education-wrapper">
                      <div class="">
                         <label class="secondary-title">OTM</label>
-                        <span class="detail-text"
-                           >O’zbekiston davlat jahon tillari universiteti</span
+                        <span class="student__university detail-text"
+                           >O’zbekiston davlat jahon tillari universiteti Test</span
                         >
                      </div>
                      <div class="">
                         <label class="secondary-title">Talabalik turi</label>
-                        <span class="detail-text">Bakalavr</span>
+                        <span class="student__education-degree detail-text">Bakalavr Test</span>
                      </div>
                      <div class="">
-                        <label class="secondary-title"
+                        <label class=" secondary-title"
                            >Ajratilingan summa</label
                         >
-                        <span class="detail-text">14 000 000 UZS</span>
+                        <span class="student__allocated-money detail-text">14 000 000 UZS Test</span>
                      </div>
                      <div class="">
                         <label class="secondary-title">Kontrakt miqdori</label>
-                        <span class="detail-text">30 000 000 UZS</span>
+                        <span class="student__tuition-fee detail-text">30 000 000 UZS  Test</span>
                      </div>
                   </div>
                </section>
@@ -665,24 +667,24 @@
                   <div class="table-wrapper">
                      <table class="table">
                         <thead class="thead">
-                           <tr class="trow">
-                              <th>#</th>
-                              <th>f.i.sh</th>
-                              <th>Ajratilingan summa</th>
-                              <th>Amallar</th>
-                           </tr>
+                           <!-- <tr class="trow"> -->
+                              <!-- <th>#</th> -->
+                              <!-- <th>f.i.sh</th> -->
+                              <!-- <th>Ajratilingan summa</th> -->
+                              <!-- <th>Amallar</th> -->
+                           <!-- </tr> -->
                         </thead>
                         <tbody class="tbody">
-                           <tr class="trow">
-                              <td>1</td>
-                              <td>Saimov Rustam Saimjonovich</td>
-                              <td>1 000 000 UZS</td>
-                              <td>
-                                 <img class="edit-students-sponsor-btn"
-                                    src="../../../assets/img/crud/edit-icon.svg"
-                                    alt="" />
-                              </td>
-                           </tr>
+                           <!-- <tr class="trow"> -->
+                              <!-- <td>1</td> -->
+                              <!-- <td>Saimov Rustam Saimjonovich</td> -->
+                              <!-- <td>1 000 000 UZS</td> -->
+                              <!-- <td> -->
+                                 <!-- <img class="edit-students-sponsor-btn" -->
+                                    <!-- src="../../../assets/img/crud/edit-icon.svg" -->
+                                    <!-- alt="" /> -->
+                              <!-- </td> -->
+                           <!-- </tr> -->
                         </tbody>
                      </table>
                   </div>
@@ -739,14 +741,14 @@
             <label for="student-full-name" class="label"
                >F.I.Sh. (Familiya Ism Sharif)</label
             >
-            <input type="text" class="input" id="student-full-name"  value="Ishmuhammedov Aziz Ishqobilovich"/>
+            <input type="text" class="input edited-student__fullname" id="student-full-name"  value="Ishmuhammedov Aziz Ishqobilovich"/>
          </div>
          <div class="form-group">
             <label for="student-number" class="label">Telefon raqam</label>
             <div class="form__phone-group">
                <span>+998</span>
                <input
-                  class="input input-phone input-number"
+                  class="input input-phone input-number edited-student__number"
                   type="text"
                   name="student-number"
                   id="student-number"
@@ -757,30 +759,23 @@
          </div>
          <div class="form-group">
             <label for="university" class="label">OTM</label>
-            <select class="select" name="university" id="university">
-               <option value="">Toshkent shahridagi INHA Universiteti</option>
-               <option value="">O’zbekiston milliy universiteti</option>
-               <option value="">Toshkent davlat texnika universiteti</option>
-               <option value="">
-                  Toshkent davlat iqtisodiyot universiteti
-               </option>
-               <option value="">
-                  O’zbekiston davlat jahon tillari universiteti
-               </option>
-               <option value="">
-                  Toshkent davlat sharqshunoslik instituti
-               </option>
-               <option value="">
-                  Toshkent to’qimachilik va нngil sanoat istituti
-               </option>
-               <option value="">Toshkent arxitektura-qurilish instituti</option>
-               <option value="">Toshkent moliya instituti</option>
+            <select class="select edited-student__university" name="university" id="university">
+               <option value="Jahon iqtisodiyoti va diplomatiya universiteti">Jahon iqtisodiyoti va diplomatiya universiteti</option>
+               <option value="Toshkent shahridagi INHA Universiteti">Toshkent shahridagi INHA Universiteti</option>
+               <option value="O’zbekiston milliy universiteti">O’zbekiston milliy universiteti</option>
+               <option value="Toshkent davlat texnika universiteti">Toshkent davlat texnika universiteti</option>
+               <option value="Toshkent davlat iqtisodiyot universiteti">Toshkent davlat iqtisodiyot universiteti</option>
+               <option value="O’zbekiston davlat jahon tillari universiteti">O’zbekiston davlat jahon tillari universiteti</option>
+               <option value="Toshkent davlat sharqshunoslik instituti">Toshkent davlat sharqshunoslik instituti</option>
+               <option value="Toshkent to’qimachilik va yengil sanoat istituti">Toshkent to’qimachilik va yengil sanoat istituti</option>
+               <option value="Toshkent arxitektura-qurilish instituti">Toshkent arxitektura-qurilish instituti</option>
+               <option value="Toshkent moliya instituti">Toshkent moliya instituti</option>
             </select>
          </div>
          <div class="form-group">
             <label class="label" for="tuition-fee">Kontrakt summa</label>
             <input
-               class="input input-number"
+               class="input input-number edited-student__tuition-fee"
                type="text"
                name="tuition-fee"
                id="tuition-fee"
@@ -789,7 +784,7 @@
          </div>
          <footer class="filter-sponsors-form__footer modal-footer">
 
-            <button class="btn btn-primary save-btn">
+            <button class="btn btn-primary save-btn save-edited-student-btn">
                <img src="../../../../assets/img/crud/save.svg" alt="Save icon" />
                Saqlash
             </button>
@@ -846,12 +841,12 @@
 
       <script type="module" src="./sponsors-table.js"></script>
       <!-- <script src="./pagination.js"></script> -->
-      <script type="module" src="./student-table.js"></script>
+      <script type="module" src="./students-table.js"></script>
       <script  type="module" src="../../components/modals/sponsor/filter-sponsors/filter-sponsors.js"></script>
       <script  type="module" src="../../components/sponsor/sponsor-detail/sponsor-detail.js"></script>
       <script  type="module"  src="../../components/modals/sponsor/edit-sponsors-info/edit-sponsors-info.js"></script>
 
-      <script  type="module" src="../../components/students/student-detail/student-detail.js"></script>
+      <script  type="module" src="../../components/students/student-detail/students-detail.js"></script>
       <script  type="module" src="../../components/modals/student/edit-student/edit-student.js"></script>
       <script  type="module" src="../../components/modals/student/filter-students/filter-student.js"></script>
       <script  type="module" src="../../components/modals/student/add-sponsor-to-student/add-sponsor-to-student.js"></script>

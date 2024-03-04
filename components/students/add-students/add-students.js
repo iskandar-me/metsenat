@@ -24,7 +24,7 @@ document.querySelector(".add-student-btn").addEventListener("click", () => {
    // const startIndex = (currentPage - 1) * rowsPerPage;
    // paginateArray();
    // const endIndex = startIndex + rowsPerPage;
-   // location.reload();
+   location.reload();
 });
 
 function addNewStudent() {
@@ -33,11 +33,13 @@ function addNewStudent() {
    data = {
       id: generateRandomId(8),
       name: document.querySelector(".new-student__name").value,
-      number: document.querySelector(".new-student__number").value,
+      phoneNumber:
+         "+998" + document.querySelector(".new-student__number").value,
       university: document.querySelector(".new-student__university").value,
       education_degree: document.querySelector(".new-student__education-degree")
          .value,
-      tuition_fee: document.querySelector(".new-student__tuition-fee").value,
+      tuition_fee:
+         document.querySelector(".new-student__tuition-fee").value ,
       allocated_money: "0",
    };
    studentsData.push(data);
@@ -54,5 +56,5 @@ const generateRandomId = function (length) {
       const randomIndex = Math.floor(Math.random() * characters.length);
       randomId += characters.charAt(randomIndex);
    }
-   return randomId;
+   return Number(randomId);
 };

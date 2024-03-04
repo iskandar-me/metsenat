@@ -17,7 +17,7 @@ export function showSponsorsTable(currentPage) {
       tr.innerHTML = `
       <td>${i + 1 + (currentPage - 1) * rowPerPage}</td>
       <td>${sponsor.name}</td>
-      <td>${sponsor.phoneNumber}</td>
+      <td><a href="tel:${sponsor.phoneNumber}">${sponsor.phoneNumber}</a></td>
       <td>${sponsor.sponsorshipSum}</td>
       <td>${sponsor.usedSum} UZS</td>
       <td>${sponsor.sana}</td>
@@ -27,7 +27,7 @@ export function showSponsorsTable(currentPage) {
       <td>
       <img onclick="openSponsorDetail(${
          sponsor.id
-})" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
+      })" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
       </td>
       `;
       sponsorsTable.append(tr);
