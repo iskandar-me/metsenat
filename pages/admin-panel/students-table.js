@@ -1,6 +1,5 @@
-"use strict";
 import { studentsData } from "../../components/students/add-students/add-students.js";
-// i { openStudentsDetail } from "../../components/students/student-detail/student-detail.js";
+import { openStudentsDetail } from "../../components/students/student-detail/students-detail.js";
 
 const studentsTable = document.getElementById("studens-table-body");
 const studentPagionationInfo = document.querySelector(
@@ -22,30 +21,6 @@ if (studentsData.length) {
    <td colspan="7" class="no-data">No data</td>
    </tr>`;
 }
-
-studentPaginationCount.addEventListener("change", () => {
-   var selectedValue = parseInt(studentPaginationCount.value);
-   let rowsPerPage = selectedValue;
-   currentPage = 1;
-   const startIndex = (currentPage - 1) * rowsPerPage;
-   const endIndex = startIndex + rowsPerPage;
-   totalPages = Math.ceil(studentsData.length / rowsPerPage); // Calculate total pages
-
-   console.log(totalPages, "total pages");
-   console.log(rowsPerPage, "rows per page");
-   console.log(studentsData.length, "students");
-   showStudentsTable(currentPage);
-   generatePagination(currentPage);
-   // location.reload();
-   studentPagionationInfo.textContent =
-      currentPage === totalPages
-         ? `${studentsData.length}dan ${
-              startIndex + 1
-           }-${totalPages} ko‘rsatilmoqda`
-         : `${studentsData.length}dan ${
-              startIndex + 1
-           }-${endIndex} ko‘rsatilmoqda`;
-});
 
 function paginateArray(array, rowsPerPage, currentPage, totalPages) {
    const startIndex = (currentPage - 1) * rowsPerPage;
@@ -72,6 +47,29 @@ function paginateArray(array, rowsPerPage, currentPage, totalPages) {
    return paginatedData;
 }
 
+studentPaginationCount.addEventListener("change", () => {
+   var selectedValue = parseInt(studentPaginationCount.value);
+   let rowsPerPage = selectedValue;
+   currentPage = 1;
+   const startIndex = (currentPage - 1) * rowsPerPage;
+   const endIndex = startIndex + rowsPerPage;
+   totalPages = Math.ceil(studentsData.length / rowsPerPage); // Calculate total pages
+
+   console.log(totalPages, "total pages");
+   console.log(rowsPerPage, "rows per page");
+   console.log(studentsData.length, "students");
+   showStudentsTable(currentPage);
+   generatePagination(currentPage);
+   // location.reload();
+   studentPagionationInfo.textContent =
+      currentPage === totalPages
+         ? `${studentsData.length}dan ${
+              startIndex + 1
+           }-${totalPages} ko‘rsatilmoqda`
+         : `${studentsData.length}dan ${
+              startIndex + 1
+           }-${endIndex} ko‘rsatilmoqda`;
+});
 function generatePagination(currentPage) {
    let paginationHtml = "";
    paginationHtml += `<button id="prev" type="button" class="arrow-icon">
@@ -105,7 +103,6 @@ function generatePagination(currentPage) {
    } else if (currentPage === totalPages) {
       document.getElementById("next").style.pointerEvents = "none";
    }
-
    // Add event listener for "Prev" button
    document.getElementById("prev").addEventListener("click", function (event) {
       event.preventDefault();
@@ -144,7 +141,6 @@ function handlePaginationClick(targetPage, currentPage) {
    generatePagination(currentPage);
    showStudentsTable(currentPage);
 }
-
 export function showStudentsTable(currentPage) {
    studentsTable.innerHTML = "";
    rowsPerPage = parseInt(studentPaginationCount.value);
@@ -161,7 +157,11 @@ export function showStudentsTable(currentPage) {
       const tr = document.createElement("tr");
       tr.innerHTML = `
                    <td>${index + 1 + (currentPage - 1) * rowsPerPage}</td>
-                   <td class='student__name'>${student.name}</td>
+                   <td class='student__name'>${
+                      student.name.length <= 30
+                         ? student.name
+                         : student.name.substring(0, 30) + "..."
+                   }</td>
                    <td>${student.education_degree}</td>
                    <td>${student.university}</td>
                    <td>${student.allocated_money} <span>UZS</span></td>
@@ -169,7 +169,7 @@ export function showStudentsTable(currentPage) {
                    <td>
                        <img onclick="openStudentsDetail(${
                           student.id
-                       })" class="eye-icon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
+                       })" class="eye-icon studentsDetailIcon" src="../../assets/img/eye.svg" alt="Eye icon" width="35" height="35">
                    </td>
                    `;
       tr.classList.add("trow");
@@ -186,3 +186,12 @@ function scrollToTop() {
       behavior: "smooth",
    });
 }
+
+document.querySelectorAll(".to-back").forEach((btn) => {
+   btn.addEventListener("click", () => {
+      document.querySelector(".student-detail-wrapper").classList.add("hidden");
+      document.querySelector(".container").style.display = "block";
+      document.querySelector(".add-student-page").classList.add("hidden");
+      document.querySelector(".sponsor-detail-wrapper").classList.add("hidden");
+   });
+});

@@ -1,19 +1,30 @@
 "use strict";
-
 import { studentsData } from "../add-students/add-students.js";
-const studentDetailWrapper = document.querySelector(".student-detail-wrapper");
+
 export function openStudentsDetail(ID) {
+   const studentDetailWrapper = document.querySelector(
+      ".student-detail-wrapper"
+   );
    studentDetailWrapper.classList.remove("hidden");
    document.querySelector(".container").style.display = "none";
    console.log("open students detail wrapper");
-   let student = studentsData.find((student) => +student.id === +ID);
-   console.log(student);
+
+   let student = studentsData.find((student) => {
+      return +student.id === +ID;
+   });
+   console.log(student, "with id " + student.id);
 
    document.querySelector(".student__name.detail-text").textContent =
-      student.name;
-   document.querySelector(".current-student__name").textContent = student.name;
+      student.name.length <= 30
+         ? student.name
+         : student.name.substring(0, 30) + "...";
+   document.querySelector(".current-student__name").textContent =
+      student.name.length <= 30
+         ? student.name
+         : student.name.substring(0, 30) + "...";
+   console.log(student.name.length, "student name");
    document.querySelector(".student__tel-number").textContent =
-      "+998 " + student.phone_number;
+      student.phone_number ? "+998 " + student.phone_number : "+998 xxyyyyyyy";
    document.querySelector(
       ".student__tel-number"
    ).href = `tel:+998${student.phone_number}`;
@@ -34,13 +45,4 @@ export function openStudentsDetail(ID) {
    );
 }
 
-openStudentsDetail(2);
-
-document.querySelectorAll(".to-back").forEach((btn) => {
-   btn.addEventListener("click", () => {
-      studentDetailWrapper.classList.add("hidden");
-      document.querySelector(".container").style.display = "block";
-      document.querySelector(".add-student-page").classList.add("hidden");
-      document.querySelector(".sponsor-detail-wrapper").classList.add("hidden");
-   });
-});
+// openStudentsDetail(1);

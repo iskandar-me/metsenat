@@ -1,12 +1,22 @@
 "use strict";
 import { studentsData } from "../../../students/add-students/add-students.js";
 import { openStudentsDetail } from "../../../students/student-detail/students-detail.js";
-// import { showStudentsTable } from "../../../../pages/admin-panel/students-table.js";
+import { showStudentsTable } from "../../../../pages/admin-panel/students-table.js";
 
 const editStudentBtn = document.querySelector(".edit-student-btn");
 let editId;
 
 editStudentBtn.addEventListener("click", () => {
+   document.querySelector(".edit-student-modal").classList.remove("hidden");
+   document.querySelector(".overlay").classList.remove("hidden");
+   document.body.style.overflow = "hidden";
+   window.scrollTo({
+      top: 0,
+   });
+
+   openEditStudentModal();
+});
+function openEditStudentModal() {
    // Get the ID of the student to edit
    editId = parseInt(document.querySelector(".edit-student-btn").value);
 
@@ -14,8 +24,9 @@ editStudentBtn.addEventListener("click", () => {
    const editedStudentIndex = studentsData.findIndex(
       (student) => student.id === editId
    );
+
    console.log(editedStudentIndex, "in edit student index btn");
-   // If the student is found, populate the edit form with their data
+
    if (editedStudentIndex !== -1) {
       const editedStudent = studentsData[editedStudentIndex];
       document.querySelector(".edited-student__fullname").value =
@@ -26,34 +37,23 @@ editStudentBtn.addEventListener("click", () => {
          editedStudent.university;
       document.querySelector(".edited-student__tuition-fee").value =
          editedStudent.tuition_fee.replace("UZS", "");
-
-      // Show the edit modal
-      document.querySelector(".edit-student-modal").classList.remove("hidden");
-      document.querySelector(".overlay").classList.remove("hidden");
-      document.body.style.overflow = "hidden";
-      window.scrollTo({
-         top: 0,
-      });
-   } else {
-      console.error("Student not found for editing.");
    }
-});
-
+}
 // Function to save the edited student data
 function saveEditedStudent() {
    // Get the edited values from the form
    const editedFullname = document.querySelector(
       ".edited-student__fullname"
    ).value;
-   const editedPhoneNumber = document.querySelector(
-      ".edited-student__number"
-   ).value;
+   const editedPhoneNumber = document.querySelector(".edited-student__number")
+      .value
+      ? document.querySelector(".edited-student__number").value
+      : "XX YYY YY-YY";
    const editedUniversity = document.querySelector(
       ".edited-student__university"
    ).value;
-   const editedTuitionFee = document.querySelector(
-      ".edited-student__tuition-fee"
-   ).value+' UZS';
+   const editedTuitionFee =
+      document.querySelector(".edited-student__tuition-fee").value + " UZS";
 
    // Update the student data
    const editedStudentIndex = studentsData.findIndex(
@@ -73,11 +73,11 @@ function saveEditedStudent() {
          education_degree: education_degree,
       };
       console.log("Student edited successfully.");
+      console.log("edited " + studentsData[editedStudentIndex].name);
+      localStorage.setItem("students", JSON.stringify(studentsData));
    } else {
       console.error("Student not found for editing.");
    }
-
-   localStorage.setItem("students", JSON.stringify(studentsData));
 }
 
 document
@@ -89,5 +89,6 @@ document
       document.body.style.overflow = "initial";
       saveEditedStudent();
       openStudentsDetail(editId);
+      showStudentsTable(currentPage);
       // location.reload();
    });

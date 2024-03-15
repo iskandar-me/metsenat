@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1a86fbe6-1c8f-4859-b589-9354e31c26a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/modals/student/edit-student/edit-student.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/modals/student/edit-student/edit-student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/students/add-students/add-students.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/students/add-students/add-students.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/students/student-detail/student-detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/students/student-detail/student-detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/students/student-detail/students-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/students/student-detail/students-detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin-panel/admin-panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin-panel/admin-panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin-panel/students-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin-panel/students-table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +24,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2cPpyjrqz3SBmOyxAHXhzyZCJgD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,6 +38,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -41,6 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708023325813</updated>
       <workItem from="1708023327996" duration="10000" />
+      <workItem from="1710478457952" duration="944000" />
     </task>
     <servers />
   </component>

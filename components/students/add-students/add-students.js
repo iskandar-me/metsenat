@@ -32,7 +32,7 @@ function addNewStudent() {
    document.querySelector(".container").style.display = "block";
    data = {
       id: generateRandomId(8),
-      name: document.querySelector(".new-student__name").value,
+      name: document.querySelector(".new-student__name").value?document.querySelector(".new-student__name").value:'New Student',
       phoneNumber:
          "+998" + document.querySelector(".new-student__number").value,
       university: document.querySelector(".new-student__university").value,
