@@ -49,10 +49,10 @@
                <button class="tablink" onclick="openTab(event,'dashboard')">
                   Dashboard
                </button>
-               <button class="tablink" onclick="openTab(event,'sponsors')"  >
+               <button class="tablink" onclick="openTab(event,'sponsors')"   id="defaultOpen">
                   Homiylar
                </button>
-               <button class="tablink" onclick="openTab(event,'students')"  id="defaultOpen" >
+               <button class="tablink" onclick="openTab(event,'students')"  >
                   Talabalar
                </button>
             </div>
@@ -147,13 +147,14 @@
                   <form class="flex gap-5">
                      <label for="pagination-count">Ko‘rsatish</label>
                      <select class="select sponsor__pagination-count" name="pagination-count" id="pagination-count">
+                        <option  class="paginationed-data-option" value="2">2</option>
                         <option  class="paginationed-data-option" value="5">5</option>
                         <option  class="paginationed-data-option" value="10">10</option>
                         <option class="paginationed-data-option" value="20">20</option>
                         <option class="paginationed-data-option" value="30">30</option>
                      </select>
                   </form>
-                  <div class="pagination-container">
+                  <div class="sponsors__pagination-container">
                      <!-- <button disabled></button>
                      <button class="current-page btn">1</button>
                      <button >2</button>
@@ -847,7 +848,7 @@
       <script defer  type="module"  src="../../components/modals/sponsor/edit-sponsors-info/edit-sponsors-info.js"></script>
 
       <script type="module" src="./students-table.js"></script>
-      <script   type="module" src="../../components/students/student-detail/students-detail.js"></script>
+      <script defer  type="module" src="../../components/students/student-detail/students-detail.js"></script>
       <script defer  type="module" src="../../components/modals/student/edit-student/edit-student.js"></script>
       <script defer  type="module" src="../../components/modals/student/filter-students/filter-student.js"></script>
       <script  defer type="module" src="../../components/modals/student/add-sponsor-to-student/add-sponsor-to-student.js"></script>
@@ -855,8 +856,6 @@
       <script defer  type="module" src="../../components/students/add-students/add-students.js"></script>
 
       <script src="../../components/form/form.js"></script>
-      <!-- <script src="../../js/script.js"></script> -->
-
       <script defer src="./search.js" type="module"></script>
       <script defer src="./admin-panel.js"></script>
 <script  defer src="statistics.js"></script>

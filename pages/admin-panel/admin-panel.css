@@ -306,6 +306,17 @@
 .trow td:nth-child(5) {
    font-weight: 500;
 }
+.tbody .no-data {
+   color: #242424;
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 1.125px;
+   text-transform: capitalize;
+   width: inherit;
+   display: block;
+}
 
 .eye-icon {
    cursor: pointer;
@@ -338,9 +349,6 @@
 .table-wrapper {
    overflow-x: auto;
 }
-
-
-
 
 /* Pagination */
 .pagination {

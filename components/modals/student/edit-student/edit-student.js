@@ -1,6 +1,6 @@
 "use strict";
 import { studentsData } from "../../../students/add-students/add-students.js";
-import { openStudentsDetail } from "../../../students/student-detail/students-detail.js";
+// import { openStudentsDetail } from "../../../students/student-detail/students-detail.js";
 import { showStudentsTable } from "../../../../pages/admin-panel/students-table.js";
 
 const editStudentBtn = document.querySelector(".edit-student-btn");
@@ -89,6 +89,6 @@ document
       document.body.style.overflow = "initial";
       saveEditedStudent();
       openStudentsDetail(editId);
-      showStudentsTable(currentPage);
+      showStudentsTable(1);
       // location.reload();
    });

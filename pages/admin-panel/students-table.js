@@ -1,5 +1,6 @@
 import { studentsData } from "../../components/students/add-students/add-students.js";
-import { openStudentsDetail } from "../../components/students/student-detail/students-detail.js";
+import { paginateArray } from "./pagination.js";
+// import { openStudentsDetail } from "../../components/students/student-detail/students-detail.js";
 
 const studentsTable = document.getElementById("studens-table-body");
 const studentPagionationInfo = document.querySelector(
@@ -14,68 +15,40 @@ const studentsPaginationContainer = document.querySelector(
 let currentPage = 1;
 let rowsPerPage, totalPages;
 
-if (studentsData.length) {
+if (studentsData.length >  0) {
    showStudentsTable(currentPage);
 } else {
    studentsTable.innerHTML = `<tr>
-   <td colspan="7" class="no-data">No data</td>
-   </tr>`;
-}
+   <td colspan="7" ><span class="no-data" >
+   Tabalalar mavjud emas
+   </span>
 
-function paginateArray(array, rowsPerPage, currentPage, totalPages) {
-   const startIndex = (currentPage - 1) * rowsPerPage;
-   const endIndex = startIndex + rowsPerPage;
-   const paginatedData = array.slice(startIndex, endIndex);
-
-   studentPagionationInfo.textContent =
-      currentPage === totalPages
-         ? `${studentsData.length}dan ${startIndex + 1}-${
-              studentsData.length
-           } ko‘rsatilmoqda`
-         : `${studentsData.length}dan ${
-              startIndex + 1
-           }-${endIndex} ko‘rsatilmoqda`;
-
-   console.log(
-      paginatedData,
-      "paginated data",
-      startIndex + 1,
-      "dan",
-      endIndex,
-      "gacha in Paginated Data"
-   );
-   return paginatedData;
+   `;
+   document.querySelectorAll(".pagination")[1].style.display = "none";
 }
 
 studentPaginationCount.addEventListener("change", () => {
    var selectedValue = parseInt(studentPaginationCount.value);
    let rowsPerPage = selectedValue;
    currentPage = 1;
-   const startIndex = (currentPage - 1) * rowsPerPage;
-   const endIndex = startIndex + rowsPerPage;
-   totalPages = Math.ceil(studentsData.length / rowsPerPage); // Calculate total pages
-
-   console.log(totalPages, "total pages");
-   console.log(rowsPerPage, "rows per page");
-   console.log(studentsData.length, "students");
+   paginateArray(
+      studentsData,
+      rowsPerPage,
+      currentPage,
+      totalPages,
+      studentPagionationInfo
+   );
    showStudentsTable(currentPage);
-   generatePagination(currentPage);
-   // location.reload();
-   studentPagionationInfo.textContent =
-      currentPage === totalPages
-         ? `${studentsData.length}dan ${
-              startIndex + 1
-           }-${totalPages} ko‘rsatilmoqda`
-         : `${studentsData.length}dan ${
-              startIndex + 1
-           }-${endIndex} ko‘rsatilmoqda`;
+   generatePagination(currentPage, studentsPaginationContainer);
 });
-function generatePagination(currentPage) {
+
+generatePagination(currentPage, studentsPaginationContainer);
+function generatePagination(currentPage, container) {
    let paginationHtml = "";
    paginationHtml += `<button id="prev" type="button" class="arrow-icon">
-   <img src="../../assets/img/arrow-icons/arrow-left.svg" alt='Left arrow icon' width="24" height='24'>
+  <img src="../../assets/img/arrow-icons/arrow-left.svg" alt='Left arrow icon' width="24" height='24'>
 
-   </button>`;
+  </button>`;
 
    for (let i = 1; i <= totalPages; i++) {
       if (
@@ -92,15 +65,18 @@ function generatePagination(currentPage) {
    }
 
    paginationHtml += `<button id="next" class="arrow-icon">
-   <img src="./../../assets/img/arrow-icons/arrow-right.svg" alt="Right arrow icon" width="24" height='24'>
+  <img src="./../../assets/img/arrow-icons/arrow-right.svg" alt="Right arrow icon" width="24" height='24'>
 
-   </button>`;
+  </button>`;
 
-   studentsPaginationContainer.innerHTML = paginationHtml;
+   container.innerHTML = paginationHtml;
 
    if (currentPage === 1) {
       document.getElementById("prev").style.pointerEvents = "none";
    } else if (currentPage === totalPages) {
+      document.getElementById("next").style.pointerEvents = "none";
+   } else if (totalPages === 1) {
+      document.getElementById("prev").style.pointerEvents = "none";
       document.getElementById("next").style.pointerEvents = "none";
    }
    // Add event listener for "Prev" button
@@ -138,21 +114,21 @@ function handlePaginationClick(targetPage, currentPage) {
       currentPage = targetPage; // If it's a number button, set currentPage directly
    }
 
-   generatePagination(currentPage);
+   generatePagination(currentPage, studentsPaginationContainer);
    showStudentsTable(currentPage);
 }
+
 export function showStudentsTable(currentPage) {
    studentsTable.innerHTML = "";
    rowsPerPage = parseInt(studentPaginationCount.value);
    totalPages = Math.ceil(studentsData.length / rowsPerPage);
-
    const paginatedData = paginateArray(
       studentsData,
       rowsPerPage,
       currentPage,
-      totalPages
+      totalPages,
+      studentPagionationInfo
    );
-
    paginatedData.forEach((student, index) => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
@@ -177,10 +153,8 @@ export function showStudentsTable(currentPage) {
    });
 }
 
-generatePagination(currentPage);
-
 // Function to scroll to the top of the page smoothly
-function scrollToTop() {
+export function scrollToTop() {
    window.scrollTo({
       top: 150,
       behavior: "smooth",

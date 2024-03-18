@@ -6,7 +6,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -15,7 +15,16 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
+         status: "Bekor qilingan",
+      },
+      {
+         id: 8477771,
+         name: "Ibragimov Sohib Mirfayozovichh",
+         phone_number: "+9989999999",
+         sponsorship_sum: 30000000,
+         used_sum: 0,
+         date: "15.01.2021",
          status: "Bekor qilingan",
       },
       {
@@ -24,7 +33,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Tasdiqlangan",
       },
       {
@@ -33,7 +42,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -42,7 +51,7 @@ export let sponsorsData = [
          phone_number: "+9988999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Tasdiqlangan",
       },
 
@@ -52,7 +61,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Moderatsiyada",
       },
       {
@@ -61,7 +70,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Moderatsiyada",
       },
       {
@@ -70,7 +79,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Moderatsiyada",
       },
       {
@@ -79,7 +88,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Tasdiqlangan",
       },
       {
@@ -88,7 +97,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -97,7 +106,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Moderatsiyada",
       },
       {
@@ -106,7 +115,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Bekor qilingan",
       },
       {
@@ -115,7 +124,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Tasdiqlangan",
       },
       {
@@ -124,7 +133,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -133,7 +142,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -142,7 +151,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Bekor qilingan",
       },
       {
@@ -151,7 +160,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -160,7 +169,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Moderatsiyada",
       },
       {
@@ -169,7 +178,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -178,7 +187,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Tasdiqlangan",
       },
       {
@@ -187,7 +196,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Bekor qilingan",
       },
       {
@@ -196,7 +205,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Moderatsiyada",
       },
       {
@@ -205,7 +214,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Tasdiqlangan",
       },
 
@@ -215,7 +224,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Yangi",
       },
       {
@@ -224,7 +233,7 @@ export let sponsorsData = [
          phone_number: "+9989999999",
          sponsorship_sum: 30000000,
          used_sum: 0,
-         sana: "15.01.2021",
+         date: "15.01.2021",
          status: "Bekor qilingan",
       },
    ],

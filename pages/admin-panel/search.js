@@ -54,7 +54,10 @@ function handleSearchSponsorInput() {
       displaySearchingSponsorResults(matchedSponsors);
    } else {
       sponsorsTable.innerHTML = `
-    <td colspan="8" class="no-data">Siz qidirgan ma'lumot topilmadi</td>
+    <td colspan="8" >
+    <span class="no-data">
+    Siz qidirgan ma'lumot topilmadi</td>
+    </span>
     </tr>
     `;
    }
@@ -120,7 +123,10 @@ function handleSearchStudentInput() {
       displaySearchingStudentResults(matchedStudents);
    } else {
       studentsTable.innerHTML = `<tr>
-         <td colspan="7" class="no-data">Siz qidirgan ma'lumot topilmadi</td>
+         <td colspan="7" >
+         <span class="no-data">
+         Siz qidirgan ma'lumot topilmadi</td>
+         </span>
          </tr>`;
    }
 }

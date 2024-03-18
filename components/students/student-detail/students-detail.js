@@ -1,7 +1,7 @@
 "use strict";
 import { studentsData } from "../add-students/add-students.js";
 
-export function openStudentsDetail(ID) {
+function openStudentsDetail(ID) {
    const studentDetailWrapper = document.querySelector(
       ".student-detail-wrapper"
    );
@@ -45,4 +45,4 @@ export function openStudentsDetail(ID) {
    );
 }
 
-// openStudentsDetail(1);
+// openStudentsDetail(14);
